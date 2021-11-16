@@ -25,7 +25,7 @@
                   <ChoiceBox prefHeight="84.0" prefWidth="57.0" />
                   <ImageView fitHeight="84.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../images/desert.jpg" />
+                        <Image url="@../../images/placeHolderFrames/desert.jpg" />
                      </image>
                   </ImageView>
                </children>
@@ -88,7 +88,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/41437038_1860844917335943_9041998952378925056_o.jpg" />
+                                    <Image url="@../../images/placeHolderFrames/41437038_1860844917335943_9041998952378925056_o.jpg" />
                                  </image>
                               </ImageView>
                            </center>
@@ -100,7 +100,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/tiger.jpg" />
+                                    <Image url="@../../images/placeHolderFrames/tiger.jpg" />
                                  </image>
                               </ImageView>
                            </center>
@@ -112,7 +112,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/pobrane.png" />
+                                    <Image url="@../../images/placeHolderFrames/pobrane.png" />
                                  </image>
                               </ImageView>
                            </center>
@@ -124,7 +124,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/41286835_1860683777352057_1722121704890695680_o.jpg" />
+                                    <Image url="@../../images/placeHolderFrames/41286835_1860683777352057_1722121704890695680_o.jpg" />
                                  </image>
                               </ImageView>
                            </center>
@@ -136,7 +136,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/34365434_1917656155193137_2734578876767272960_o.jpg" />
+                                    <Image url="@../../images/placeHolderFrames/34365434_1917656155193137_2734578876767272960_o.jpg" />
                                  </image>
                               </ImageView>
                            </center>
@@ -148,7 +148,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/34258929_1917656098526476_1107148616499200000_o.jpg" />
+                                    <Image url="@../../images/placeHolderFrames/34258929_1917656098526476_1107148616499200000_o.jpg" />
                                  </image>
                               </ImageView>
                            </center>
@@ -160,7 +160,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/Nidzica_07_07_2018_161.JPG" />
+                                    <Image url="@../../images/placeHolderFrames/Nidzica_07_07_2018_161.JPG" />
                                  </image>
                               </ImageView>
                            </center>
@@ -172,7 +172,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/254767777_214265740824420_7356503078465399337_n.jpg" />
+                                    <Image url="@../../images/placeHolderFrames/254767777_214265740824420_7356503078465399337_n.jpg" />
                                  </image>
                               </ImageView>
                            </center>
@@ -184,7 +184,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/252810222_420022596237210_8747374312137295269_n.jpg" />
+                                    <Image url="@../../images/placeHolderFrames/252810222_420022596237210_8747374312137295269_n.jpg" />
                                  </image>
                               </ImageView>
                            </center>
@@ -196,7 +196,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/255922700_416448963370711_654555367696908580_n.jpg" />
+                                    <Image url="@../../images/placeHolderFrames/255922700_416448963370711_654555367696908580_n.jpg" />
                                  </image>
                               </ImageView>
                            </center>
@@ -208,7 +208,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/22780239_1677692188970009_3316256740868720165_n.jpg" />
+                                    <Image url="@../../images/placeHolderFrames/22780239_1677692188970009_3316256740868720165_n.jpg" />
                                  </image>
                               </ImageView>
                            </center>
@@ -220,7 +220,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/34258900_1644518615597086_3892220129525628928_o.jpg" />
+                                    <Image url="@../../images/placeHolderFrames/34258900_1644518615597086_3892220129525628928_o.jpg" />
                                  </image>
                               </ImageView>
                            </center>
@@ -232,7 +232,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/Nidzica_07_07_2018_180.JPG" />
+                                    <Image url="@../../images/placeHolderFrames/Nidzica_07_07_2018_180.JPG" />
                                  </image>
                               </ImageView>
                            </center>
@@ -244,7 +244,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/41516692_2156023747803515_3633086129579753472_o.jpg" />
+                                    <Image url="@../../images/placeHolderFrames/41516692_2156023747803515_3633086129579753472_o.jpg" />
                                  </image>
                               </ImageView>
                            </center>
@@ -256,7 +256,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/42887286_1880284008724912_2238185561925877760_o%20(1).jpg" />
+                                    <Image url="@../../images/placeHolderFrames/42887286_1880284008724912_2238185561925877760_o%20(1).jpg" />
                                  </image>
                               </ImageView>
                            </center>
@@ -268,7 +268,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/41529188_2157574767648413_6346977514681794560_o.jpg" />
+                                    <Image url="@../../images/placeHolderFrames/41529188_2157574767648413_6346977514681794560_o.jpg" />
                                  </image>
                               </ImageView>
                            </center>
