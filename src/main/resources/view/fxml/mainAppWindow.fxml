@@ -15,269 +15,268 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="1267.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <VBox prefHeight="756.0" prefWidth="220.0">
-         <children>
-            <HBox prefHeight="84.0" prefWidth="219.0">
-               <children>
-                  <ChoiceBox prefHeight="84.0" prefWidth="57.0" />
-                  <ImageView fitHeight="84.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../images/desert.jpg" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="239.0" text="Button" />
-            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="461.0" />
-            <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="232.0" text="Button" />
-            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="372.0" />
-            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="233.0" text="Button" />
-            <Separator orientation="VERTICAL" prefHeight="55.0" prefWidth="245.0" />
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="264.0" text="Button" />
-            <Separator orientation="VERTICAL" prefHeight="13.0" prefWidth="219.0" />
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="235.0" text="Button" />
-            <Separator orientation="VERTICAL" prefHeight="4.0" prefWidth="232.0" />
-            <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="245.0" text="Button" />
-            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="351.0" />
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="258.0" text="Button" />
-            <Separator orientation="VERTICAL" prefHeight="7.0" prefWidth="362.0" />
-            <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="235.0" text="Button" />
-            <TreeView prefHeight="200.0" prefWidth="200.0" />
-         </children>
-      </VBox>
-      <HBox prefHeight="756.0" prefWidth="1049.0">
-         <children>
-            <VBox prefHeight="756.0" prefWidth="1050.0">
-               <children>
-                  <HBox prefHeight="56.0" prefWidth="1048.0">
-                     <children>
-                        <Separator prefHeight="57.0" prefWidth="203.0" />
-                        <TextField prefHeight="72.0" prefWidth="401.0" text="SZUKAJ" />
-                        <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="60.0" text="Button" />
-                        <Separator prefHeight="79.0" prefWidth="138.0" />
-                        <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="59.0" text="Button" />
-                        <Separator prefHeight="59.0" prefWidth="0.0" />
-                        <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="54.0" text="Button" />
-                        <Separator prefHeight="110.0" prefWidth="0.0" />
-                        <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="62.0" text="Button" />
-                        <Separator prefHeight="134.0" prefWidth="0.0" />
-                        <Button minWidth="37.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="37.0" text="Button" />
-                     </children>
-                  </HBox>
-                  <GridPane prefHeight="734.0" prefWidth="1048.0">
-                    <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/41437038_1860844917335943_9041998952378925056_o.jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/tiger.jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/pobrane.png" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/41286835_1860683777352057_1722121704890695680_o.jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/34365434_1917656155193137_2734578876767272960_o.jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/34258929_1917656098526476_1107148616499200000_o.jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/Nidzica_07_07_2018_161.JPG" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/254767777_214265740824420_7356503078465399337_n.jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/252810222_420022596237210_8747374312137295269_n.jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/255922700_416448963370711_654555367696908580_n.jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/22780239_1677692188970009_3316256740868720165_n.jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/34258900_1644518615597086_3892220129525628928_o.jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/Nidzica_07_07_2018_180.JPG" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/41516692_2156023747803515_3633086129579753472_o.jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/42887286_1880284008724912_2238185561925877760_o%20(1).jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
-                           <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
-                           </bottom>
-                           <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@../../images/41529188_2157574767648413_6346977514681794560_o.jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                     </children>
-                  </GridPane>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-   </children>
+    <children>
+        <VBox prefHeight="756.0" prefWidth="220.0">
+            <children>
+                <HBox prefHeight="84.0" prefWidth="219.0">
+                    <children>
+                        <ChoiceBox prefHeight="84.0" prefWidth="57.0" />
+                        <ImageView fitHeight="84.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/desert.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="239.0" text="Strona główna" />
+                <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="461.0" />
+                <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="232.0" text="Popularne" />
+                <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="372.0" />
+                <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="233.0" text="Polecane" />
+                <Separator orientation="VERTICAL" prefHeight="55.0" prefWidth="245.0" />
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="264.0" text="Akcja" />
+                <Separator orientation="VERTICAL" prefHeight="13.0" prefWidth="219.0" />
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="235.0" text="Kryminał" />
+                <Separator orientation="VERTICAL" prefHeight="4.0" prefWidth="232.0" />
+                <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="245.0" text="Science - Fiction" />
+                <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="351.0" />
+                <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="258.0" text="Dramat" />
+                <Separator orientation="VERTICAL" prefHeight="7.0" prefWidth="362.0" />
+                <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="235.0" text="Seriale" />
+                <TreeView prefHeight="200.0" prefWidth="200.0" />
+            </children>
+        </VBox>
+        <HBox prefHeight="756.0" prefWidth="1049.0">
+            <children>
+                <VBox prefHeight="756.0" prefWidth="1050.0">
+                    <children>
+                        <HBox prefHeight="56.0" prefWidth="1048.0">
+                            <children>
+                                <Separator prefHeight="57.0" prefWidth="200.0" />
+                                <TextField prefHeight="72.0" prefWidth="401.0" text="SZUKAJ" />
+                                <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="60.0" text="Szukaj" />
+                                <Separator prefHeight="79.0" prefWidth="100.0" />
+                                <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="59.0" text="Pomoc" />
+                                <Separator prefHeight="59.0" prefWidth="0.0" />
+                                <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="57.0" text="Wygląd" />
+                                <Separator prefHeight="110.0" prefWidth="0.0" />
+                                <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="74.0" text="Ustawienia" />
+                                <Separator prefHeight="134.0" prefWidth="0.0" />
+                                <Button minWidth="37.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="60.0" text="Wyloguj" />
+                            </children>
+                        </HBox>
+                        <GridPane prefHeight="734.0" prefWidth="1048.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/41437038_1860844917335943_9041998952378925056_o.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/tiger.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/pobrane.png" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/41286835_1860683777352057_1722121704890695680_o.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/34365434_1917656155193137_2734578876767272960_o.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/34258929_1917656098526476_1107148616499200000_o.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/Nidzica_07_07_2018_161.JPG" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/254767777_214265740824420_7356503078465399337_n.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/252810222_420022596237210_8747374312137295269_n.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/255922700_416448963370711_654555367696908580_n.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/22780239_1677692188970009_3316256740868720165_n.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/34258900_1644518615597086_3892220129525628928_o.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/Nidzica_07_07_2018_180.JPG" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/41516692_2156023747803515_3633086129579753472_o.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/42887286_1880284008724912_2238185561925877760_o%20(1).jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                    <bottom>
+                                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                                    </bottom>
+                                    <center>
+                                        <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../../../../../../../Things/IntelliJ/IdeaProjects/Noosphere/src/main/resources/images/41529188_2157574767648413_6346977514681794560_o.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                </BorderPane>
+                            </children>
+                        </GridPane>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
 </HBox>

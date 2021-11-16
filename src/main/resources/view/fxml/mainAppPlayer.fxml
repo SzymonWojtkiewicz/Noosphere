@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="1267.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="756.0" prefWidth="220.0">
+         <children>
+            <HBox prefHeight="84.0" prefWidth="219.0">
+               <children>
+                  <ChoiceBox prefHeight="84.0" prefWidth="57.0" />
+                  <ImageView fitHeight="84.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/desert.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="239.0" text="Strona główna" />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="461.0" />
+            <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="232.0" text="Popularne" />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="372.0" />
+            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="233.0" text="Polecane" />
+            <Separator orientation="VERTICAL" prefHeight="55.0" prefWidth="245.0" />
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="264.0" text="Akcja" />
+            <Separator orientation="VERTICAL" prefHeight="13.0" prefWidth="219.0" />
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="235.0" text="Kryminał" />
+            <Separator orientation="VERTICAL" prefHeight="4.0" prefWidth="232.0" />
+            <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="245.0" text="Science - Fiction" />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="351.0" />
+            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="258.0" text="Dramat" />
+            <Separator orientation="VERTICAL" prefHeight="7.0" prefWidth="362.0" />
+            <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="235.0" text="Seriale" />
+            <TreeView prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+      <HBox prefHeight="756.0" prefWidth="1048.0">
+         <children>
+            <VBox prefHeight="756.0" prefWidth="1050.0">
+               <children>
+                  <HBox prefHeight="39.0" prefWidth="1048.0">
+                     <children>
+                        <Separator prefHeight="57.0" prefWidth="200.0" />
+                        <TextField prefHeight="72.0" prefWidth="401.0" text="SZUKAJ" />
+                        <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="60.0" text="Szukaj" />
+                        <Separator prefHeight="79.0" prefWidth="100.0" />
+                        <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="59.0" text="Pomoc" />
+                        <Separator prefHeight="59.0" prefWidth="0.0" />
+                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="57.0" text="Wygląd" />
+                        <Separator prefHeight="110.0" prefWidth="0.0" />
+                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="74.0" text="Ustawienia" />
+                        <Separator prefHeight="134.0" prefWidth="0.0" />
+                        <Button minWidth="37.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="60.0" text="Wyloguj" />
+                     </children>
+                  </HBox>
+                  <TabPane prefHeight="687.0" prefWidth="1048.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Film 1">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="658.0" prefWidth="1000.0">
+                                 <children>
+                                    <VBox layoutX="-1.0" prefHeight="663.0" prefWidth="675.0">
+                                       <children>
+                                          <AnchorPane prefHeight="324.0" prefWidth="675.0">
+                                             <children>
+                                                <ImageView fitHeight="242.0" fitWidth="556.0" layoutX="60.0" layoutY="15.0">
+                                                   <image>
+                                                      <Image url="@../../images/255922700_416448963370711_654555367696908580_n.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000b3" height="41.0" layoutX="60.0" layoutY="216.0" stroke="BLACK" strokeType="INSIDE" width="556.0" />
+                                                <Button layoutX="67.0" layoutY="224.0" mnemonicParsing="false" text="&gt;" />
+                                                <Button layoutX="325.0" layoutY="124.0" mnemonicParsing="false" text="&gt;" />
+                                                <Button layoutX="102.0" layoutY="224.0" mnemonicParsing="false" text="=" />
+                                                <Button layoutX="581.0" layoutY="224.0" mnemonicParsing="false" text="+" />
+                                                <Slider layoutX="136.0" layoutY="230.0" prefHeight="14.0" prefWidth="74.0" />
+                                                <Button layoutX="477.0" layoutY="298.0" mnemonicParsing="false" text="Like" />
+                                                <Button layoutX="542.0" layoutY="298.0" mnemonicParsing="false" text="Dislike" />
+                                                <Label layoutX="486.0" layoutY="281.0" text="nan" />
+                                                <Label layoutX="558.0" layoutY="281.0" text="nan" />
+                                             </children>
+                                          </AnchorPane>
+                                          <Separator prefHeight="16.0" prefWidth="675.0" />
+                                          <AnchorPane prefHeight="293.0" prefWidth="675.0">
+                                             <children>
+                                                <Text layoutX="277.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Miejsce na komentarze" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </VBox>
+                                    <AnchorPane layoutX="674.0" prefHeight="663.0" prefWidth="374.0">
+                                       <children>
+                                          <Text layoutX="128.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Miejsce na sugestie" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Film 2">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</HBox>
