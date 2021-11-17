@@ -12,6 +12,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
@@ -24,11 +25,15 @@
             <HBox prefHeight="84.0" prefWidth="219.0">
                <children>
                   <ChoiceBox prefHeight="84.0" prefWidth="57.0" />
-                  <ImageView fitHeight="84.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../images/placeHolderFrames/desert.jpg" />
-                     </image>
-                  </ImageView>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <ImageView fitHeight="41.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../../images/logos/Wariant3-2Cut.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                  </BorderPane>
                </children>
             </HBox>
             <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="239.0" text="Strona główna" />
