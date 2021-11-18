@@ -40,16 +40,18 @@
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="372.0" />
             <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="233.0" text="Music" />
             <Separator orientation="VERTICAL" prefHeight="55.0" prefWidth="245.0" />
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="264.0" text="Libery" />
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="264.0" text="Library" />
             <Separator orientation="VERTICAL" prefHeight="13.0" prefWidth="219.0" />
             <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="235.0" text="History" />
             <Separator orientation="VERTICAL" prefHeight="4.0" prefWidth="232.0" />
             <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="245.0" text="Your Videos" />
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="351.0" />
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="258.0" text="Wach Later" />
+            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="258.0" text="Watch Later" />
             <Separator orientation="VERTICAL" prefHeight="7.0" prefWidth="362.0" />
             <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="235.0" text="Liked videos" />
-            <TreeView prefHeight="200.0" prefWidth="200.0" />
+            <Separator orientation="VERTICAL" prefHeight="16.0" prefWidth="362.0" />
+            <TreeView prefHeight="180.0" prefWidth="200.0" />
+            <Separator orientation="VERTICAL" prefHeight="16.0" prefWidth="230.0" />
          </children>
       </VBox>
       <HBox prefHeight="756.0" prefWidth="1049.0">
@@ -61,12 +63,12 @@
                         <Separator prefHeight="57.0" prefWidth="203.0" />
                         <TextField prefHeight="72.0" prefWidth="401.0" text="look for..." />
                         <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="60.0" text="Search" />
-                        <Separator prefHeight="79.0" prefWidth="138.0" />
-                        <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="59.0" text="Button" />
+                        <Separator prefHeight="79.0" prefWidth="130.0" />
+                        <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="59.0" text="Help" />
                         <Separator prefHeight="59.0" prefWidth="0.0" />
-                        <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="54.0" text="Button" />
+                        <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="54.0" text="Look" />
                         <Separator prefHeight="110.0" prefWidth="0.0" />
-                        <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="62.0" text="Button" />
+                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="67.0" text="Settings" />
                         <Separator prefHeight="134.0" prefWidth="0.0" />
                         <Button minWidth="37.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="74.0" text="Account">
                            <font>
@@ -90,7 +92,7 @@
                      <children>
                         <BorderPane prefHeight="200.0" prefWidth="200.0">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Patataj i do przodu" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
@@ -102,7 +104,7 @@
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Dzikie opowieści" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
@@ -114,7 +116,7 @@
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Dzieje rycerskie" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
@@ -126,23 +128,29 @@
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Gdzie czai się mrok" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@../../images/placeHolderFrames/23157401_1472726596159366_8110775598856876021_o.jpg" />
+                                 </image></ImageView>
                            </center>
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Pustka" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@../../images/placeHolderFrames/158527471_3676673222431348_7474879959560274982_n.jpg" />
+                                 </image></ImageView>
                            </center>
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Odważni i waleczni" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
@@ -154,7 +162,7 @@
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Kiedyś to było" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
@@ -166,7 +174,7 @@
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Co się wydarzyło w pewnej dolinie" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
@@ -178,7 +186,7 @@
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Filmowo" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
@@ -190,7 +198,7 @@
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Kanał" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
@@ -202,39 +210,51 @@
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Nieznane ruiny" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@../../images/placeHolderFrames/174610183_3791943017571034_8070018052349413243_n.jpg" />
+                                 </image></ImageView>
                            </center>
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Droga do zguby" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@../../images/placeHolderFrames/255950060_4417162251715771_4571136058263912839_n.jpg" />
+                                 </image></ImageView>
                            </center>
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Sporty ekstremalne" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@../../images/placeHolderFrames/surf%20(1).jpg" />
+                                 </image></ImageView>
                            </center>
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Zagubieni" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@../../images/placeHolderFrames/123996041_3371344192964254_450105510026829004_n.jpg" />
+                                 </image></ImageView>
                            </center>
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Za piaskami" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
@@ -246,10 +266,13 @@
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
                            <bottom>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Label" BorderPane.alignment="CENTER" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="197.0" text="Na skraju lasu" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
-                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                              <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@../../images/placeHolderFrames/127138870_3404300376335302_3008727991372693775_n.jpg" />
+                                 </image></ImageView>
                            </center>
                         </BorderPane>
                      </children>
