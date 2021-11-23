@@ -36,22 +36,23 @@
                   </BorderPane>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="239.0" text="Strona główna" />
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="239.0" text="Wideo" />
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="461.0" />
-            <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="232.0" text="Popularne" />
+            <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="232.0" text="Fotografie" />
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="372.0" />
-            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="233.0" text="Polecane" />
+            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="233.0" text="Muzyka" />
             <Separator orientation="VERTICAL" prefHeight="55.0" prefWidth="245.0" />
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="264.0" text="Akcja" />
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="264.0" text="Biblioteka" />
             <Separator orientation="VERTICAL" prefHeight="13.0" prefWidth="219.0" />
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="235.0" text="Kryminał" />
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="235.0" text="Historia" />
             <Separator orientation="VERTICAL" prefHeight="4.0" prefWidth="232.0" />
-            <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="245.0" text="Science - Fiction" />
+            <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="245.0" text="Twoje filmy" />
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="351.0" />
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="258.0" text="Dramat" />
+            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="258.0" text="Oglądaja później" />
             <Separator orientation="VERTICAL" prefHeight="7.0" prefWidth="362.0" />
-            <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="235.0" text="Seriale" />
-            <TreeView prefHeight="200.0" prefWidth="200.0" />
+            <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="235.0" text="Polubione filmy" />
+            <Separator orientation="VERTICAL" prefHeight="16.0" prefWidth="230.0" />
+            <TreeView prefHeight="180.0" prefWidth="200.0" />
          </children>
       </VBox>
       <HBox prefHeight="756.0" prefWidth="1048.0">
@@ -61,16 +62,16 @@
                   <HBox prefHeight="39.0" prefWidth="1048.0">
                      <children>
                         <Separator prefHeight="57.0" prefWidth="200.0" />
-                        <TextField prefHeight="72.0" prefWidth="401.0" text="SZUKAJ" />
+                        <TextField prefHeight="72.0" prefWidth="401.0" text="szukaj..." />
                         <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="60.0" text="Szukaj" />
-                        <Separator prefHeight="79.0" prefWidth="100.0" />
-                        <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="59.0" text="Pomoc" />
+                        <Separator prefHeight="79.0" prefWidth="90.0" />
+                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="58.0" text="Pomoc" />
                         <Separator prefHeight="59.0" prefWidth="0.0" />
-                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="57.0" text="Wygląd" />
+                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="58.0" text="Wygląd" />
                         <Separator prefHeight="110.0" prefWidth="0.0" />
-                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="74.0" text="Ustawienia" />
+                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="81.0" text="Ustawienia" />
                         <Separator prefHeight="134.0" prefWidth="0.0" />
-                        <Button minWidth="37.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="60.0" text="Wyloguj" />
+                        <Button minWidth="37.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="60.0" text="Konto" />
                      </children>
                   </HBox>
                   <TabPane prefHeight="687.0" prefWidth="1048.0" tabClosingPolicy="UNAVAILABLE">
@@ -79,7 +80,7 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="658.0" prefWidth="1000.0">
                                  <children>
-                                    <VBox layoutX="-1.0" prefHeight="663.0" prefWidth="675.0">
+                                    <VBox layoutX="-1.0" prefHeight="663.0" prefWidth="793.0">
                                        <children>
                                           <AnchorPane prefHeight="324.0" prefWidth="675.0">
                                              <children>
@@ -91,13 +92,13 @@
                                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000b3" height="41.0" layoutX="60.0" layoutY="216.0" stroke="BLACK" strokeType="INSIDE" width="556.0" />
                                                 <Button layoutX="67.0" layoutY="224.0" mnemonicParsing="false" text="&gt;" />
                                                 <Button layoutX="325.0" layoutY="124.0" mnemonicParsing="false" text="&gt;" />
-                                                <Button layoutX="102.0" layoutY="224.0" mnemonicParsing="false" text="=" />
-                                                <Button layoutX="581.0" layoutY="224.0" mnemonicParsing="false" text="+" />
-                                                <Slider layoutX="136.0" layoutY="230.0" prefHeight="14.0" prefWidth="74.0" />
-                                                <Button layoutX="477.0" layoutY="298.0" mnemonicParsing="false" text="Like" />
-                                                <Button layoutX="542.0" layoutY="298.0" mnemonicParsing="false" text="Dislike" />
-                                                <Label layoutX="486.0" layoutY="281.0" text="nan" />
-                                                <Label layoutX="558.0" layoutY="281.0" text="nan" />
+                                                <Button layoutX="132.0" layoutY="224.0" mnemonicParsing="false" text="=" />
+                                                <Button layoutX="551.0" layoutY="224.0" mnemonicParsing="false" text="+" />
+                                                <Slider layoutX="206.0" layoutY="230.0" prefHeight="14.0" prefWidth="74.0" />
+                                                <Button layoutX="517.0" layoutY="298.0" mnemonicParsing="false" text="Like" />
+                                                <Button layoutX="622.0" layoutY="298.0" mnemonicParsing="false" text="Dislike" />
+                                                <Label layoutX="536.0" layoutY="281.0" text="***" />
+                                                <Label layoutX="640.0" layoutY="281.0" text="***" />
                                              </children>
                                           </AnchorPane>
                                           <Separator prefHeight="16.0" prefWidth="675.0" />
@@ -108,9 +109,9 @@
                                           </AnchorPane>
                                        </children>
                                     </VBox>
-                                    <AnchorPane layoutX="674.0" prefHeight="663.0" prefWidth="374.0">
+                                    <AnchorPane layoutX="790.0" prefHeight="663.0" prefWidth="258.0">
                                        <children>
-                                          <Text layoutX="128.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Miejsce na sugestie" />
+                                          <Text layoutX="70.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Miejsce na sugestie" />
                                        </children>
                                     </AnchorPane>
                                  </children>
