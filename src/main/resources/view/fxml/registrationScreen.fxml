@@ -1,15 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
 <!--Your comment-->
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
 
-
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="547.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegisterController">
+   <children>
+      <ImageView fitHeight="116.0" fitWidth="239.0" layoutX="185.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/logos/Wariant2-1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="45.0" layoutY="86.0" text="Rejestracja">
+         <font>
+            <Font name="Ebrima Bold" size="32.0" />
+         </font>
+      </Label>
+      <VBox layoutX="45.0" layoutY="151.0" prefHeight="382.0" prefWidth="519.0" spacing="20.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <VBox prefHeight="70.0" prefWidth="275.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="292.0" text="Imię">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font></Label>
+                              <TextField fx:id="nameTextField" />
+                           </children></VBox>
+                        <VBox prefHeight="70.0" prefWidth="277.0" spacing="5.0">
+                           <children>
+                              <Label text="Nazwisko">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font></Label>
+                              <TextField fx:id="surnameTextField" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fillWidth="false" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="70.0" prefWidth="248.0" spacing="5.0">
+                     <children>
+                        <Label text="Nazwa użytkownika">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="usernameTextField" prefHeight="25.0" prefWidth="239.0" />
+                        <Label fx:id="usernameInfoLabel" text="&lt;Nick jest zajęty&gt;" textFill="#c0392b" />
+                     </children>
+                  </VBox>
+               </children></VBox>
+            <VBox fillWidth="false" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="69.0" prefWidth="248.0" spacing="5.0">
+                     <children>
+                        <Label text="Adres e-mail">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="emailTextField" prefHeight="25.0" prefWidth="238.0" />
+                        <Label text="&lt;Adres e-mail jest zajęty&gt;" textFill="#c0392b" />
+                     </children>
+                  </VBox>
+               </children></VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <VBox prefHeight="71.0" prefWidth="258.0" spacing="5.0">
+                           <children>
+                              <Label text="Hasło">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="passwordTextField" onKeyTyped="#CheckPassword" />
+                              <Label fx:id="passwordInfoLabel" text="&lt;Hasło nie spełnia kryteriów&gt;" textFill="#c0392b" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="71.0" prefWidth="262.0" spacing="5.0">
+                           <children>
+                              <Label text="Powtórz hasło">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="passwordConfirmTextField" />
+                              <Label fx:id="passwordConfirmInfoLabel" text="&lt;Hasła się nie zgadzają&gt;" textFill="#c0392b" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children></VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Anuluj" />
+                        <Button mnemonicParsing="false" onAction="#CreateAccount" text="Utwórz konto" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></VBox>
+   </children>
 </AnchorPane>
