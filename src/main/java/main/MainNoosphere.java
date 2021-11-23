@@ -1,5 +1,6 @@
 package main;
 
+import Database.DatabaseManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -18,6 +19,7 @@ public class MainNoosphere extends Application {
         Scene scene = new Scene(mainAppWindow);
         stage.setScene(scene);
         stage.show();
-
+        DatabaseManager dbVideos = new DatabaseManager();
+        dbVideos.connectToDatabase();
     }
 }
