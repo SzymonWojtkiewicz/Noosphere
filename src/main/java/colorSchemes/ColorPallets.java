@@ -9,10 +9,11 @@ public class ColorPallets
     public final String backgroundSecondColor = "backgroundSecond";
     public final String textColor = "text";
     public final String buttonColor = "button";
-    public final String warningColor = "warning";
+    public final String errorColor = "warning";
+    public final String successColor = "success";
 
-    Map<String, String> colorLightMap = new HashMap<String, String>();
-    Map<String, String> colorDarkMap = new HashMap<String, String>();
+    private Map<String, String> colorLightMap = new HashMap<String, String>();
+    private Map<String, String> colorDarkMap = new HashMap<String, String>();
 
     public ColorPallets()
     {
@@ -20,14 +21,20 @@ public class ColorPallets
         colorLightMap.put(backgroundSecondColor, "#34495E");
         colorLightMap.put(textColor, "#BDC3C7");
         colorLightMap.put(buttonColor, "#2980B9");
-        colorLightMap.put(warningColor, "#C0392B");
+        colorLightMap.put(errorColor, "#C0392B");
+        colorLightMap.put(successColor, "#2ECC71");
 
         colorDarkMap.put(backgroundColor, "#ECF0F1");
         colorDarkMap.put(backgroundSecondColor, "#BDC3C7");
         colorDarkMap.put(textColor, "#34495E");
         colorDarkMap.put(buttonColor, "#3498DB");
-        colorDarkMap.put(warningColor, "#E74C3C");
+        colorDarkMap.put(errorColor, "#E74C3C");
+        colorDarkMap.put(successColor, "#27AE60");
     }
 
-
+    public String GetColor(String type)
+    {
+        //zmienna wskazujacy na typ motywu
+        return colorLightMap.get(type); //jasny motyw jako domyslny do testow
+    }
 }
