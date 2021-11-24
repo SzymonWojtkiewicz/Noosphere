@@ -10,6 +10,10 @@ public class AppSettings {
     public AppSettings(){
     }
 
+    public void setNightMode(){
+        nightMode = !nightMode;
+    }
+
     public String backgroundColor(){
         ColorPallets pallet = new ColorPallets();
         if(nightMode)

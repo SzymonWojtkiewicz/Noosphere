@@ -73,4 +73,47 @@ public class RegisterController
     {
         //Porownanie hasla podanego w tym polu z polem "Haslo"
     }
+    /*
+        ^
+        |
+        there should be only declarations
+     */
+    public void initialize(){
+
+    }
+
+    //here you will put eventHandler like
+    /*
+    mainAnchorPane.addEventFilter(KeyEvent.KEY_PRESSED, KeyEvent ->{
+
+            switch (KeyEvent.getCode()){
+                case UP:
+                    if(newGame.move("up"))
+                        newGame.addNumber();
+                    display(newGame.getGameArray());
+                    scoreLabel.setText((Integer.toString((newGame.getScore()))));
+                    break;
+                case DOWN:
+                    if(newGame.move("down"))
+                        newGame.addNumber();
+                    display(newGame.getGameArray());
+                    scoreLabel.setText((Integer.toString((newGame.getScore()))));
+                    break;
+                case LEFT:
+                    if(newGame.move("left"))
+                        newGame.addNumber();
+                    display(newGame.getGameArray());
+                    scoreLabel.setText((Integer.toString((newGame.getScore()))));
+                    break;
+                case RIGHT:
+                    if(newGame.move("right"))
+                        newGame.addNumber();
+                    display(newGame.getGameArray());
+                    scoreLabel.setText((Integer.toString((newGame.getScore()))));
+                    break;
+            }
+        });
+
+    }
+     */
 }

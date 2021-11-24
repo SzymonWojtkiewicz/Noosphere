@@ -1,6 +1,7 @@
 package main;
 
 import Database.DatabaseManager;
+import appSettings.AppSettings;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,6 +11,7 @@ import javafx.stage.Stage;
 
 public class MainNoosphere extends Application {
     public static void main(String[] args){
+        AppSettings appSettings = new AppSettings();
         launch();
     }
     @Override
