@@ -237,7 +237,7 @@
                            <center>
                               <ImageView fitHeight="109.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../../images/placeHolderFrames/surf%20(1).jpg" />
+                                    <Image url="@../../images/placeHolderFrames/surf(1).jpg" />
                                  </image></ImageView>
                            </center>
                         </BorderPane>
