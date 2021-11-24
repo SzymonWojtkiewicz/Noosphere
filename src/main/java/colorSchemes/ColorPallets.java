@@ -11,8 +11,8 @@ public class ColorPallets
     public final String buttonColor = "button";
     public final String warningColor = "warning";
 
-    Map<String, String> colorLightMap = new HashMap<String, String>();
-    Map<String, String> colorDarkMap = new HashMap<String, String>();
+    private Map<String, String> colorLightMap = new HashMap<String, String>();
+    private Map<String, String> colorDarkMap = new HashMap<String, String>();
 
     public ColorPallets()
     {
@@ -29,5 +29,11 @@ public class ColorPallets
         colorDarkMap.put(warningColor, "#E74C3C");
     }
 
+    public String getLightColor(String key){
+        return colorLightMap.get(key);
+    }
+    public String getDarkColor(String key){
+        return colorDarkMap.get(key);
+    }
 
 }
