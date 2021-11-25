@@ -6,7 +6,7 @@ public class DatabaseManager {
     Connection conn = null;
     ResultSet result = null;
     String dbName = "NOOSPHERE";
-    public void connectToDatabase(){
+    public void connectToMysql(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
             conn = DriverManager.getConnection("jdbc:mysql://localhost/?" + "user=root&password=");
@@ -30,9 +30,24 @@ public class DatabaseManager {
         }
 
     }
+    public void connectToDatabase(){
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/" +dbName+ "?user=root&password=");
+
+            if(conn != null){
+                System.out.println("Connected to database");
+            }
+
+        } catch (Exception ex){
+            System.out.println("Unable to connect to database");
+            System.out.println("SQLException: " + ex.getMessage());
+        }
+
+    }
     public void createDatabase(){
         if(conn == null){
-            connectToDatabase();
+            connectToMysql();
         }
         try {
             Statement stmt = conn.createStatement();
@@ -45,7 +60,18 @@ public class DatabaseManager {
         }
     }
     public void createUsersTable(){
+        connectToDatabase();
 
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "CREATE TABLE USERS (id INTEGER not NULL, username VARCHAR(255), email VARCHAR(255), password VARCHAR(255), administrator BIT, PRIMARY KEY (id))";
+            stmt.executeUpdate(sql);
+            System.out.println("Created table");
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
     public void createVideosTable(){
 

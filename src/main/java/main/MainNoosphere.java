@@ -20,7 +20,9 @@ public class MainNoosphere extends Application {
         stage.setScene(scene);
         stage.show();
         DatabaseManager dbVideos = new DatabaseManager();
-        //dbVideos.connectToDatabase();
+        //dbVideos.connectToMysql();
         dbVideos.createDatabase();
+        //dbVideos.connectToDatabase();
+        dbVideos.createUsersTable();
     }
 }
