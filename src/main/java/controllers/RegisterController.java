@@ -41,6 +41,13 @@ public class RegisterController
     private boolean isEmailValid = false;
     private boolean isPasswordValid = false;
 
+    public void initialize()
+    {
+        usernameInfoLabel.setVisible(false);
+        emailInfoLabel.setVisible(false);
+        createAccountErrorLabel.setVisible(false);
+    }
+
     @FXML
     public void CreateAccount(ActionEvent actionEvent)
     {
@@ -51,10 +58,11 @@ public class RegisterController
         String password = passwordTextField.getText();
         String passwordConfirm = passwordConfirmTextField.getText();
 
+        createAccountErrorLabel.setVisible(true);
         //sprawdz czy wszystkie pola zostaly uzupelnione
         if(name.isEmpty() || surname.isEmpty() || username.isEmpty() ||
                 email.isEmpty() || password.isEmpty() || passwordConfirm.isEmpty())
-            createAccountErrorLabel.setText("Prosimy o wypelnienie wszystkich pol!");
+            createAccountErrorLabel.setText("Nie wszystkie pola zostaly wypelnione!");
         else if(!isUsernameValid)
             createAccountErrorLabel.setText("Podana nazwa uzytkownika jest niepoprawna!");
         else if(!isEmailValid)
@@ -131,8 +139,8 @@ public class RegisterController
 
         //pobieramy kolory z naszej klasy
         ColorPallets colorPallets = new ColorPallets();
-        Color errorColor = Color.web(colorPallets.GetColor(colorPallets.errorColor));
-        Color successColor = Color.web(colorPallets.GetColor(colorPallets.successColor));
+        Color errorColor = Color.web(colorPallets.getLightColor(colorPallets.errorColor));
+        Color successColor = Color.web(colorPallets.getLightColor(colorPallets.successColor));
 
         // I - sprawdz dlugosc hasla
         if(password.length() < 8)

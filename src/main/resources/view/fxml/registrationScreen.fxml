@@ -118,6 +118,6 @@
                </children>
             </VBox>
          </children></VBox>
-      <Label fx:id="createAccountErrorLabel" layoutX="316.0" layoutY="507.0" prefHeight="17.0" prefWidth="248.0" text="Label" textFill="#c0392b" />
+      <Label fx:id="createAccountErrorLabel" layoutX="316.0" layoutY="507.0" prefHeight="17.0" prefWidth="248.0" text="&lt;Informacja, gdy nie uda się utworzyć konta&gt;" textFill="#c0392b" />
    </children>
 </AnchorPane>

@@ -9,7 +9,7 @@ public class ColorPallets
     public final String backgroundSecondColor = "backgroundSecond";
     public final String textColor = "text";
     public final String buttonColor = "button";
-    public final String errorColor = "warning";
+    public final String errorColor = "error";
     public final String successColor = "success";
 
     private Map<String, String> colorLightMap = new HashMap<String, String>();
@@ -32,9 +32,10 @@ public class ColorPallets
         colorDarkMap.put(successColor, "#27AE60");
     }
 
-    public String GetColor(String type)
-    {
-        //zmienna wskazujacy na typ motywu
-        return colorLightMap.get(type); //jasny motyw jako domyslny do testow
+    public String getLightColor(String key){
+        return colorLightMap.get(key);
+    }
+    public String getDarkColor(String key){
+        return colorDarkMap.get(key);
     }
 }
