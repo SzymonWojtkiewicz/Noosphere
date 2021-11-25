@@ -4,7 +4,7 @@ import colorSchemes.ColorPallets;
 
 public class AppSettings {
     private Boolean nightMode;
-    private int highOfWindow;
+    private int heightOfWindow;
     private int widthOfWindow;
 
     public AppSettings(){

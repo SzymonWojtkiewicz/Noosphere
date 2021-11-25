@@ -3,6 +3,7 @@ module Noosphere {
     requires javafx.graphics;
     requires javafx.controls;
     requires java.sql;
+    requires javafx.media;
 
     exports controllers to javafx.graphics;
 
