@@ -15,7 +15,7 @@ public class MainNoosphere extends Application {
     @Override
     public void start(Stage stage) throws  Exception{
 
-        HBox mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mainAppWindow.fxml"));
+        HBox mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mediaPlayer.fxml"));
         Scene scene = new Scene(mainAppWindow);
         stage.setScene(scene);
         stage.show();
