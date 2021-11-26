@@ -6,14 +6,23 @@ public class AppSettings {
     private Boolean nightMode;
     private int heightOfWindow;
     private int widthOfWindow;
+    private String language;
 
     public AppSettings(){
+        this.language = "English";
     }
 
     public void setNightMode(){
         nightMode = !nightMode;
     }
 
+    public String getLanguage(){
+        return this.language;
+    }
+
+    public void setLanguage(String language){  //add check if file for requested language exists
+        this.language = language;
+    }
     public String backgroundColor(){
         ColorPallets pallet = new ColorPallets();
         if(nightMode)
