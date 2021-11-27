@@ -6,6 +6,7 @@ public class DatabaseManager {
     Connection conn = null;
     ResultSet result = null;
     String dbName = "NOOSPHERE";
+
     public void connectToMysql(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -14,22 +15,14 @@ public class DatabaseManager {
             if(conn != null){
                 System.out.println("Connected");
             }
-/*
-            String query = "select * from gatunki";
-            var statement = conn.prepareStatement(query);
-            ResultSet result = statement.executeQuery();
-            while (result.next()){
-                int id = result.getInt("id");
-                String nazwa = result.getString("nazwa");
-                System.out.println(id + nazwa);
-            }
-*/
+
         } catch (Exception ex){
             System.out.println("Unable to connect");
             System.out.println("SQLException: " + ex.getMessage());
         }
 
     }
+
     public void connectToDatabase(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -45,6 +38,7 @@ public class DatabaseManager {
         }
 
     }
+
     public void createDatabase(){
         if(conn == null){
             connectToMysql();
@@ -59,12 +53,14 @@ public class DatabaseManager {
             System.out.println(e.getMessage());
         }
     }
+
     public void createUsersTable(){
         connectToDatabase();
 
         try {
             Statement stmt = conn.createStatement();
-            String sql = "CREATE TABLE USERS (id INTEGER not NULL, username VARCHAR(255), email VARCHAR(255), password VARCHAR(255), administrator BIT, PRIMARY KEY (id))";
+            String sql = "CREATE TABLE USERS (id INTEGER not NULL AUTO_INCREMENT, username VARCHAR(255), email VARCHAR(255)," +
+                    " password VARCHAR(255), administrator BIT, UNIQUE(username, email), PRIMARY KEY (id))";
             stmt.executeUpdate(sql);
             System.out.println("Created table");
             conn.close();
@@ -73,11 +69,66 @@ public class DatabaseManager {
             System.out.println(e.getMessage());
         }
     }
+
     public void createVideosTable(){
+        connectToDatabase();
+
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "CREATE TABLE VIDEOS (id INTEGER not NULL AUTO_INCREMENT, title VARCHAR(255), director VARCHAR(255), genre VARCHAR(255), language VARCHAR(255), PRIMARY KEY (id))";
+            stmt.executeUpdate(sql);
+            System.out.println("Created table");
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void createUser(String username, String email, String password, boolean administrator){
+        connectToDatabase();
+
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "INSERT INTO USERS (username, email, password, administrator) VALUES ( " +username+ ", " +email+ ", " +password+ ", " +administrator+ ")";
+            stmt.executeUpdate(sql);
+            System.out.println("Created user");
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
 
     }
-    public void createUser(){
 
+    public void upgradeToAdmin(String username){
+        connectToDatabase();
+
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "UPDATE USERS SET administrator = 1 WHERE username in ( " +username+ ")";
+            stmt.executeUpdate(sql);
+            System.out.println("Edited user");
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void downgradeToUser(String username){
+        connectToDatabase();
+
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "UPDATE USERS " + "SET administrator = 0 WHERE username in (" +username+ ")";
+            stmt.executeUpdate(sql);
+            System.out.println("Edited user");
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 }
