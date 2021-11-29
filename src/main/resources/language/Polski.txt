@@ -1,0 +1,19 @@
+$Registration$Rejestracja
+$FirstName$Imię
+$LastName$Nazwisko
+$UserName$Nazwa użytkownika
+$EmailAddress$Adres e-mail
+$Password$Hasło
+$RepeatPassword$Powtórz hasło
+$Cancel$Anuluj
+$CreateAnAccount$Utwórz konto
+$Minimum8Characters$Minimum 8 znaków
+$MinimumOneDigit$Minimum jedna duża litera
+$MinimumOneCapitalLetter$Nie wszystkie pola zostały wypełnione!
+$NotAllFieldsHaveBeenCompleted!$Podana nazwa użytkownika jest niepoprawna!
+$GivenEmailAddressIsInvalid!$Podany adres email jest niepoprawny!
+$ThePasswordYouEnterDoesNotMeetTheSecurityRequirements!$Podane hasło nie spełnia wymagań bezpieczeństwa!
+$PasswordsDoNotMatch!$Hasła się nie zgadzają!
+$AccountCreatedSuccessfully!$Pomyślnie utworzono konto!
+$IncorrectFormOfEmailAddress!$Niepoprawna forma adresu email!
+$GivenEmailAddressIsTaken!$Podany adres email jest zajęty!

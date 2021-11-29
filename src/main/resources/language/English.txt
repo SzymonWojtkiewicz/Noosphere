@@ -1,0 +1,19 @@
+$Registration$Registration
+$FirstName$First name
+$LastName$Last name
+$UserName$User name
+$EmailAddress$Email address
+$Password$Password
+$RepeatPassword$
+$Cancel$Cancel
+$CreateAnAccount$Create An account
+$Minimum8Characters$Minimum 8 characters
+$MinimumOneDigit$Minimum one digit
+$MinimumOneCapitalLetter$Minimum one capital letter
+$NotAllFieldsHaveBeenCompleted!$Not all fields have been completed!
+$GivenUserNameIsInvalid!$Given user name is invalid!
+$ThePasswordYouEnterDoesNotMeetTheSecurityRequirements!$The password you enter does not meet the security requirements!
+$PasswordsDoNotMatch!$Passwords do not match!
+$AccountCreatedSuccessfully!$Account created successfully!
+$IncorrectFormOfEmailAddress!$Incorrect form of email address!
+$GivenEmailAddressIsTaken!$Given email address is taken!
