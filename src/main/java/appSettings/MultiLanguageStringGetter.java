@@ -16,7 +16,7 @@ public class MultiLanguageStringGetter {
 
     public String getString (String language, String baseName)throws Exception
     {
-        File file = new File("./src/main/resources/language/English.txt");
+        File file = new File("./src/main/resources/language/" + language + ".txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
 
