@@ -1,5 +1,6 @@
 package controllers;
 
+import appSettings.AppSettings;
 import colorSchemes.ColorPallets;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -139,8 +140,8 @@ public class RegisterController
 
         //pobieramy kolory z naszej klasy
         ColorPallets colorPallets = new ColorPallets();
-        Color errorColor = Color.web(colorPallets.getLightColor(colorPallets.errorColor));
-        Color successColor = Color.web(colorPallets.getLightColor(colorPallets.successColor));
+        Color errorColor = Color.web(AppSettings.errorColor());         //<-I changed that SW
+        Color successColor = Color.web(AppSettings.successColor());     //<-I changed that SW
 
         // I - sprawdz dlugosc hasla
         if(password.length() < 8)
@@ -176,47 +177,4 @@ public class RegisterController
         else
             isPasswordValid = false;
     }
-    /*
-        ^
-        |
-        there should be only declarations
-     */
-    public void initialize(){
-
-    }
-
-    //here you will put eventHandler like
-    /*
-    mainAnchorPane.addEventFilter(KeyEvent.KEY_PRESSED, KeyEvent ->{
-
-            switch (KeyEvent.getCode()){
-                case UP:
-                    if(newGame.move("up"))
-                        newGame.addNumber();
-                    display(newGame.getGameArray());
-                    scoreLabel.setText((Integer.toString((newGame.getScore()))));
-                    break;
-                case DOWN:
-                    if(newGame.move("down"))
-                        newGame.addNumber();
-                    display(newGame.getGameArray());
-                    scoreLabel.setText((Integer.toString((newGame.getScore()))));
-                    break;
-                case LEFT:
-                    if(newGame.move("left"))
-                        newGame.addNumber();
-                    display(newGame.getGameArray());
-                    scoreLabel.setText((Integer.toString((newGame.getScore()))));
-                    break;
-                case RIGHT:
-                    if(newGame.move("right"))
-                        newGame.addNumber();
-                    display(newGame.getGameArray());
-                    scoreLabel.setText((Integer.toString((newGame.getScore()))));
-                    break;
-            }
-        });
-
-    }
-     */
 }

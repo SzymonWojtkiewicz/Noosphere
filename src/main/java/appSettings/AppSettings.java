@@ -6,7 +6,7 @@ import colorSchemes.ColorPallets;
 //example   AppSettings.setLanguage("Polski");
 
 public class AppSettings {
-    private static Boolean nightMode;
+    private static Boolean nightMode = true;
     private static int heightOfWindow;
     private static int widthOfWindow;
     private static String language = "English";
@@ -23,39 +23,54 @@ public class AppSettings {
         this.language = language;
     }
 
-    public static String backgroundColor(){
-        ColorPallets pallet = new ColorPallets();
+    //I way to get color
+    public static String getColorByKey(String key){
         if(nightMode)
-            return pallet.getDarkColor("background");
+            return ColorPallets.getDarkColor(key);
         else
-            return pallet.getLightColor("background");
+            return ColorPallets.getLightColor(key);
+    }
+    //II way to get color
+    public static String backgroundColor(){
+        if(nightMode)
+            return ColorPallets.getDarkColor("background");
+        else
+            return ColorPallets.getLightColor("background");
     }
     public static String backgroundSecondColor(){
-        ColorPallets pallet = new ColorPallets();
         if(nightMode)
-            return pallet.getDarkColor("backgroundSecond");
+            return ColorPallets.getDarkColor("backgroundSecond");
         else
-            return pallet.getLightColor("backgroundSecond");
+            return ColorPallets.getLightColor("backgroundSecond");
     }
     public static String textColor(){
-        ColorPallets pallet = new ColorPallets();
         if(nightMode)
-            return pallet.getDarkColor("text");
+            return ColorPallets.getDarkColor("text");
         else
-            return pallet.getLightColor("text");
+            return ColorPallets.getLightColor("text");
     }
     public static String buttonColor(){
-        ColorPallets pallet = new ColorPallets();
         if(nightMode)
-            return pallet.getDarkColor("button");
+            return ColorPallets.getDarkColor("button");
         else
-            return pallet.getLightColor("button");
+            return ColorPallets.getLightColor("button");
     }
     public static String warningColor(){
-        ColorPallets pallet = new ColorPallets();
         if(nightMode)
-            return pallet.getDarkColor("warning");
+            return ColorPallets.getDarkColor("warning");
         else
-            return pallet.getLightColor("warning");
+            return ColorPallets.getLightColor("warning");
+    }
+    public static String errorColor(){
+        if(nightMode)
+            return ColorPallets.getDarkColor("error");
+        else
+            return ColorPallets.getLightColor("error");
+    }
+    public static String successColor(){
+        if(nightMode)
+            return ColorPallets.getDarkColor("success");
+        else
+            return ColorPallets.getLightColor("success");
     }
 }
