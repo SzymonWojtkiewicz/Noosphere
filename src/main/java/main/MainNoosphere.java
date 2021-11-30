@@ -13,8 +13,8 @@ import appSettings.MultiLanguageStringGetter;
 public class MainNoosphere extends Application {
     public static void main(String[] args) throws  Exception{
         AppSettings appSettings = new AppSettings();
-        MultiLanguageStringGetter a = new MultiLanguageStringGetter();
-        System.out.println(a.getString("Polski", "Registration"));
+        //MultiLanguageStringGetter a = new MultiLanguageStringGetter();
+        System.out.println(MultiLanguageStringGetter.getString(AppSettings.getLanguage(), "Registration"));
         launch();
     }
     @Override

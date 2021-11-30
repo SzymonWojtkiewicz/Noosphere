@@ -1,11 +1,9 @@
 package appSettings;
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileReader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Scanner;
 import java.io.File;
+
+//example MultiLanguageStringGetter.getString(AppSettings.getLanguage(), "Registration")
 
 public class MultiLanguageStringGetter {
 
@@ -14,7 +12,7 @@ public class MultiLanguageStringGetter {
 
     }
 
-    public String getString (String language, String baseName)throws Exception
+    public static String getString (String language, String baseName)throws Exception
     {
         File file = new File("./src/main/resources/language/" + language + ".txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
