@@ -8,7 +8,7 @@
 
 <!--Your comment-->
 
-<AnchorPane prefHeight="547.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegisterController">
+<AnchorPane prefHeight="572.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegisterController">
    <children>
       <ImageView fitHeight="116.0" fitWidth="239.0" layoutX="185.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -58,8 +58,8 @@
                               <Font name="Arial" size="15.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="usernameTextField" prefHeight="25.0" prefWidth="239.0" />
-                        <Label fx:id="usernameInfoLabel" text="&lt;Nick jest zajęty&gt;" textFill="#c0392b" />
+                        <TextField fx:id="usernameTextField" onKeyTyped="#CheckUsername" prefHeight="25.0" prefWidth="239.0" />
+                        <Label fx:id="usernameInfoLabel" text="&lt;Podana nazwa użytkownika jest zajęta&gt;" textFill="#c0392b" />
                      </children>
                   </VBox>
                </children></VBox>
@@ -72,8 +72,8 @@
                               <Font name="Arial" size="15.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="emailTextField" prefHeight="25.0" prefWidth="238.0" />
-                        <Label text="&lt;Adres e-mail jest zajęty&gt;" textFill="#c0392b" />
+                        <TextField fx:id="emailTextField" onKeyTyped="#CheckEmail" prefHeight="25.0" prefWidth="238.0" />
+                        <Label fx:id="emailInfoLabel" text="&lt;Podany adres email jest zajety&gt;" textFill="#c0392b" />
                      </children>
                   </VBox>
                </children></VBox>
@@ -89,7 +89,9 @@
                                  </font>
                               </Label>
                               <PasswordField fx:id="passwordTextField" onKeyTyped="#CheckPassword" />
-                              <Label fx:id="passwordInfoLabel" text="&lt;Hasło nie spełnia kryteriów&gt;" textFill="#c0392b" />
+                              <Label fx:id="passwordInfoLengthLabel" text="&lt;Minimum 8 znaków&gt;" textFill="#c0392b" />
+                              <Label fx:id="passwordInfoDigitLabel" text="&lt;Minimum 1 cyfra&gt;" textFill="#c0392b" />
+                              <Label fx:id="passwordInfoLetterLabel" text="&lt;Minimum 1 duża litera&gt;" textFill="#c0392b" />
                            </children>
                         </VBox>
                         <VBox prefHeight="71.0" prefWidth="262.0" spacing="5.0">
@@ -100,7 +102,6 @@
                                  </font>
                               </Label>
                               <PasswordField fx:id="passwordConfirmTextField" />
-                              <Label fx:id="passwordConfirmInfoLabel" text="&lt;Hasła się nie zgadzają&gt;" textFill="#c0392b" />
                            </children>
                         </VBox>
                      </children>
@@ -117,5 +118,6 @@
                </children>
             </VBox>
          </children></VBox>
+      <Label fx:id="createAccountErrorLabel" layoutX="316.0" layoutY="507.0" prefHeight="17.0" prefWidth="248.0" text="&lt;Informacja, gdy nie uda się utworzyć konta&gt;" textFill="#c0392b" />
    </children>
 </AnchorPane>
