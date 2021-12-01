@@ -4,7 +4,7 @@ $LastName$Last name
 $UserName$User name
 $EmailAddress$Email address
 $Password$Password
-$RepeatPassword$
+$RepeatPassword$Repeat password
 $Cancel$Cancel
 $CreateAnAccount$Create An account
 $Minimum8Characters$Minimum 8 characters

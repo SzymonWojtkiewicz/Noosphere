@@ -15,7 +15,7 @@ public class MainNoosphere extends Application {
     public static void main(String[] args) throws  Exception{
         AppSettings appSettings = new AppSettings();
         //MultiLanguageStringGetter a = new MultiLanguageStringGetter();
-        System.out.println(MultiLanguageStringGetter.getString(AppSettings.getLanguage(), "Registration"));
+        System.out.println(MultiLanguageStringGetter.getString("Registration"));
         launch();
     }
     @Override

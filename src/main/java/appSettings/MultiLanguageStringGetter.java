@@ -12,9 +12,9 @@ public class MultiLanguageStringGetter {
 
     }
 
-    public static String getString (String language, String baseName)throws Exception
+    public static String getString (String baseName)throws Exception
     {
-        File file = new File("./src/main/resources/language/" + language + ".txt");
+        File file = new File("./src/main/resources/language/" + AppSettings.getLanguage() + ".txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
 
