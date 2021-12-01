@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.File;
 
-//example MultiLanguageStringGetter.getString(AppSettings.getLanguage(), "Registration")
+//example MultiLanguageStringGetter.getString("Registration")
 
 public class MultiLanguageStringGetter {
 

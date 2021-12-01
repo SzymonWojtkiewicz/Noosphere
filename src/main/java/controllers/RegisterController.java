@@ -1,9 +1,11 @@
 package controllers;
 
 import appSettings.AppSettings;
+import appSettings.MultiLanguageStringGetter;
 import colorSchemes.ColorPallets;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -42,15 +44,47 @@ public class RegisterController
     private boolean isEmailValid = false;
     private boolean isPasswordValid = false;
 
-    public void initialize()
+    @FXML
+    private Label registerLabel;
+    @FXML
+    private Label nameLabel;
+    @FXML
+    private Label surnameLabel;
+    @FXML
+    private Label usernameLabel;
+    @FXML
+    private Label emailLabel;
+    @FXML
+    private Label passwordLabel;
+    @FXML
+    private Label repeatPasswordLabel;
+    @FXML
+    private Button createAccountButton;
+    @FXML
+    private Button cancelButton;
+
+    public void initialize() throws Exception
     {
         usernameInfoLabel.setVisible(false);
         emailInfoLabel.setVisible(false);
         createAccountErrorLabel.setVisible(false);
+
+        registerLabel.setText(MultiLanguageStringGetter.getString("Registration"));
+        nameLabel.setText(MultiLanguageStringGetter.getString("FirstName"));
+        surnameLabel.setText(MultiLanguageStringGetter.getString("LastName"));
+        usernameLabel.setText(MultiLanguageStringGetter.getString("UserName"));
+        emailLabel.setText(MultiLanguageStringGetter.getString("EmailAddress"));
+        passwordLabel.setText(MultiLanguageStringGetter.getString("Password"));
+        repeatPasswordLabel.setText(MultiLanguageStringGetter.getString("RepeatPassword"));
+        createAccountButton.setText(MultiLanguageStringGetter.getString("CreateAnAccount"));
+        cancelButton.setText(MultiLanguageStringGetter.getString("Cancel"));
+        passwordInfoLengthLabel.setText(MultiLanguageStringGetter.getString("Minimum8Characters"));
+        passwordInfoDigitLabel.setText(MultiLanguageStringGetter.getString("MinimumOneDigit"));
+        passwordInfoLetterLabel.setText(MultiLanguageStringGetter.getString("MinimumOneCapitalLetter"));
     }
 
     @FXML
-    public void CreateAccount(ActionEvent actionEvent)
+    public void CreateAccount(ActionEvent actionEvent) throws Exception
     {
         String name = nameTextField.getText();
         String surname = surnameTextField.getText();
@@ -60,21 +94,23 @@ public class RegisterController
         String passwordConfirm = passwordConfirmTextField.getText();
 
         createAccountErrorLabel.setVisible(true);
+        createAccountErrorLabel.setTextFill(Color.web(AppSettings.errorColor())); //ustaw domyslnie na czerwony
         //sprawdz czy wszystkie pola zostaly uzupelnione
         if(name.isEmpty() || surname.isEmpty() || username.isEmpty() ||
                 email.isEmpty() || password.isEmpty() || passwordConfirm.isEmpty())
-            createAccountErrorLabel.setText("Nie wszystkie pola zostaly wypelnione!");
+            createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("NotAllFieldsHaveBeenCompleted!"));
         else if(!isUsernameValid)
-            createAccountErrorLabel.setText("Podana nazwa uzytkownika jest niepoprawna!");
+            createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("GivenUserNameIsInvalid!!"));
         else if(!isEmailValid)
-            createAccountErrorLabel.setText("Podany adres email jest niepoprawny!");
+            createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("GivenEmailAddressIsInvalid!"));
         else if(!isPasswordValid)
-            createAccountErrorLabel.setText("Podane haslo nie spelnia wymagan bezpieczenstwa!");
+            createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("ThePasswordYouEnterDoesNotMeetTheSecurityRequirements!"));
         else if(!password.equals(passwordConfirm))
-            createAccountErrorLabel.setText("Hasla sie nie zgadzaja!");
+            createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("PasswordsDoNotMatch!"));
         else
         {
-            createAccountErrorLabel.setText("Pomyslnie utworzono konto!");
+            createAccountErrorLabel.setTextFill(Color.web(AppSettings.successColor()));
+            createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("AccountCreatedSuccessfully!"));
             //TODO: Przeslanie danych do bazy danych
         }
     }
@@ -100,7 +136,7 @@ public class RegisterController
     }
 
     @FXML
-    public void CheckEmail(KeyEvent keyEvent)
+    public void CheckEmail(KeyEvent keyEvent) throws Exception
     {
         String email = emailTextField.getText();
 
@@ -117,13 +153,13 @@ public class RegisterController
         if(!email.matches(emailRegex))
         {
             emailInfoLabel.setVisible(true);
-            emailInfoLabel.setText("Niepoprawna forma adresu email!");
+            emailInfoLabel.setText(MultiLanguageStringGetter.getString("IncorrectFormOfEmailAddress!"));
             isEmailValid = false;
         }
         else if(isTaken) //sprawdzamy czy email jest zajety
         {
             emailInfoLabel.setVisible(true);
-            emailInfoLabel.setText("Podany adres email jest zajety!");
+            emailInfoLabel.setText(MultiLanguageStringGetter.getString("GivenEmailAddressIsTaken!"));
             isEmailValid = false;
         }
         else
@@ -139,9 +175,8 @@ public class RegisterController
         String password = passwordTextField.getText();
 
         //pobieramy kolory z naszej klasy
-        ColorPallets colorPallets = new ColorPallets();
-        Color errorColor = Color.web(AppSettings.errorColor());         //<-I changed that SW
-        Color successColor = Color.web(AppSettings.successColor());     //<-I changed that SW
+        Color errorColor = Color.web(AppSettings.errorColor());
+        Color successColor = Color.web(AppSettings.successColor());
 
         // I - sprawdz dlugosc hasla
         if(password.length() < 8)
