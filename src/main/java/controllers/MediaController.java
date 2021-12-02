@@ -29,7 +29,8 @@ public class MediaController implements Initializable{
 
     public void initialize(URL arg0, ResourceBundle arg1) {
 
-        file = new File("@../../video.mp4");
+        file = new File("src/main/resources/videos/video.mp4"
+        );
 
         media = new Media(file.toURI().toString());
 
