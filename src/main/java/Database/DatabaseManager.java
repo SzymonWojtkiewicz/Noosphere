@@ -25,8 +25,12 @@ public class DatabaseManager {
 
     public void connectToDatabase(){
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/" +dbName+ "?user=root&password=");
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            //connecting to local database
+            //conn = DriverManager.getConnection("jdbc:mysql://localhost/" +dbName+ "?user=root&password=");
+            //connecting to remote database
+            String url = "jdbc:mysql://192.166.219.220/bigflex";
+            conn = DriverManager.getConnection(url, "bigflex", "f5IyhvPF..");
 
             if(conn != null){
                 System.out.println("Connected to database");
@@ -35,6 +39,7 @@ public class DatabaseManager {
         } catch (Exception ex){
             System.out.println("Unable to connect to database");
             System.out.println("SQLException: " + ex.getMessage());
+            ex.printStackTrace();
         }
 
     }
