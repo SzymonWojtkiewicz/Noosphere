@@ -25,13 +25,13 @@ public class MainNoosphere extends Application {
         stage.setScene(scene);
         stage.show();
 
-        /*
-        DatabaseManager dbVideos = new DatabaseManager();
-        dbVideos.createDatabase();
-        dbVideos.createUsersTable();
-        dbVideos.createVideosTable();
-        dbVideos.createUser("'tak'", "'nie'", "'halo'", false);
-        dbVideos.upgradeToAdmin("'tak'");
-         */
+        //DatabaseManager dbVideos = new DatabaseManager();
+        //dbVideos.connectToDatabase();
+        //dbVideos.createDatabase();
+        //dbVideos.createUsersTable();
+        //dbVideos.createVideosTable();
+        //dbVideos.createUser("'tak'", "'nie'", "'halo'", false);
+        //dbVideos.upgradeToAdmin("'tak'");
+
     }
 }
