@@ -15,12 +15,13 @@ public class MainNoosphere extends Application {
     public static void main(String[] args) throws  Exception{
         AppSettings appSettings = new AppSettings();
         //MultiLanguageStringGetter a = new MultiLanguageStringGetter();
+        //System.out.println(MultiLanguageStringGetter.getString("Registration")); ,
         launch();
     }
     @Override
     public void start(Stage stage) throws  Exception{
 
-        AnchorPane mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/registrationScreen.fxml")); //HBox mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mainAppWindow.fxml"));
+        AnchorPane mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mediaPlayer.fxml")); //HBox mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mainAppWindow.fxml"));
         Scene scene = new Scene(mainAppWindow);
         stage.setScene(scene);
         stage.show();
