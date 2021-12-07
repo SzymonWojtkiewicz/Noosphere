@@ -4,12 +4,19 @@ import java.io.File;
 import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+
 import javafx.scene.control.Button;
+import javafx.scene.control.Slider;
+
+import javafx.scene.input.MouseEvent;
+
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
+
 import javafx.util.Duration;
 
 
@@ -21,6 +28,9 @@ public class MediaController implements Initializable{
     @FXML
     private Button playButton, pauseButton, rewatchButton;
 
+    @FXML
+    private Slider progressBar; //TODO
+
     private File file;
     private Media media;
     private MediaPlayer mediaPlayer;
@@ -29,7 +39,8 @@ public class MediaController implements Initializable{
 
     public void initialize(URL arg0, ResourceBundle arg1) {
 
-        file = new File("src/main/resources/videos/video.mp4");
+        file = new File("src/main/resources/videos/video.mp4"
+        );
 
         media = new Media(file.toURI().toString());
 
@@ -58,6 +69,12 @@ public class MediaController implements Initializable{
             mediaPlayer.seek(Duration.seconds(0.0));
 
         }
+
+    }
+
+    public void progressBarDrag(MouseEvent event) {
+
+        //TODO - implement slider bar functions
 
     }
 
