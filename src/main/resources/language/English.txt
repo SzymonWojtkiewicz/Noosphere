@@ -12,6 +12,7 @@ $MinimumOneDigit$Minimum one digit
 $MinimumOneCapitalLetter$Minimum one capital letter
 $NotAllFieldsHaveBeenCompleted!$Not all fields have been completed!
 $GivenUserNameIsInvalid!$Given user name is invalid!
+$GivenEmailAddressIsInvalid!$Given email address is invalid!
 $ThePasswordYouEnterDoesNotMeetTheSecurityRequirements!$The password you enter does not meet the security requirements!
 $PasswordsDoNotMatch!$Passwords do not match!
 $AccountCreatedSuccessfully!$Account created successfully!

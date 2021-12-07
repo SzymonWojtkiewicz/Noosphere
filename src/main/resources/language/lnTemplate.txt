@@ -12,6 +12,7 @@ $MinimumOneDigit$
 $MinimumOneCapitalLetter$
 $NotAllFieldsHaveBeenCompleted!$
 $GivenUserNameIsInvalid!$
+$GivenEmailAddressIsInvalid!$
 $ThePasswordYouEnterDoesNotMeetTheSecurityRequirements!$
 $PasswordsDoNotMatch!$
 $AccountCreatedSuccessfully!$
