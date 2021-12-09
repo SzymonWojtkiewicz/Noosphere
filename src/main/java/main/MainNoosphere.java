@@ -20,7 +20,8 @@ public class MainNoosphere extends Application {
     @Override
     public void start(Stage stage) throws  Exception{
 
-        AnchorPane mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/registrationScreen.fxml")); //HBox mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mainAppWindow.fxml"));
+        HBox mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mainAppWindow.fxml"));
+        //AnchorPane mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/registrationScreen.fxml"));
         Scene scene = new Scene(mainAppWindow);
         stage.setScene(scene);
         stage.show();
