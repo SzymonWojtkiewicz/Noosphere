@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Plik fxml, ktory sluzy jako szablon do tworzenia zawartosci komorek (gdzie sa miniaturki filmow) na stronie glownej -->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="151.0" prefWidth="193.0" spacing="5.0">
+         <children>
+            <ImageView fitHeight="147.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/placeHolderFrames/23157401_1472726596159366_8110775598856876021_o.jpg" />
+               </image></ImageView>
+            <Label text="Label" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
