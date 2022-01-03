@@ -28,11 +28,12 @@ public class MainNoosphere extends Application {
 
         //DatabaseManager dbVideos = new DatabaseManager();
         //dbVideos.connectToDatabase();
-        //dbVideos.createDatabase();
         //dbVideos.createUsersTable();
         //dbVideos.createVideosTable();
-        //dbVideos.createUser("'tak'", "'nie'", "'halo'", false);
+        //dbVideos.createAccount("'tak'", "'nie'", "'halo'", false);
         //dbVideos.upgradeToAdmin("'tak'");
-
+        //dbVideos.displayAccountName("tak");
+        //dbVideos.displayAccount("tak");
+        //dbVideos.deleteAccount("tak");
     }
 }

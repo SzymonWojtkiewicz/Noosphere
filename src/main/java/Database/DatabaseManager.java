@@ -2,7 +2,7 @@ package Database;
 
 import java.sql.*;
 
-public class DatabaseManager {
+public class DatabaseManager implements Database{
     Connection conn = null;
     ResultSet result = null;
     String dbName = "NOOSPHERE";
@@ -90,7 +90,7 @@ public class DatabaseManager {
         }
     }
 
-    public void createUser(String username, String email, String password, boolean administrator){
+    public void createAccount(String username, String email, String password, boolean administrator){
         connectToDatabase();
 
         try {
@@ -129,6 +129,69 @@ public class DatabaseManager {
             String sql = "UPDATE USERS " + "SET administrator = 0 WHERE username in (" +username+ ")";
             stmt.executeUpdate(sql);
             System.out.println("Edited user");
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void displayAccountName(String username){
+        connectToDatabase();
+
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT username FROM USERS WHERE USERNAME = '" + username + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            System.out.println(rs.getString("username"));
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void displayAccount(String username){
+        connectToDatabase();
+
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT username, email FROM USERS WHERE username = '" + username + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            System.out.println(rs.getString("username"));
+            System.out.println(rs.getString("email"));
+            checkIfAdmin(username);
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void checkIfAdmin(String username){
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT administrator FROM USERS WHERE USERNAME = '" + username + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            if(rs.getBoolean("administrator") == true) System.out.println("Administrator");
+            else System.out.println("No administrator rights");
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void deleteAccount(String username) {
+        connectToDatabase();
+
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "DELETE FROM USERS WHERE USERNAME = '" + username + "'";
+            stmt.executeUpdate(sql);
+            System.out.println("User deleted");
             conn.close();
 
         } catch (SQLException e) {
