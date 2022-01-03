@@ -15,24 +15,25 @@ public class MainNoosphere extends Application {
     public static void main(String[] args) throws  Exception{
         AppSettings appSettings = new AppSettings();
         //MultiLanguageStringGetter a = new MultiLanguageStringGetter();
+        System.out.println(MultiLanguageStringGetter.getString("Registration"));
         launch();
     }
     @Override
     public void start(Stage stage) throws  Exception{
 
-        HBox mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mainAppWindow.fxml"));
-        //AnchorPane mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/registrationScreen.fxml"));
+        AnchorPane mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/registrationScreen.fxml")); //HBox mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mainAppWindow.fxml"));
         Scene scene = new Scene(mainAppWindow);
         stage.setScene(scene);
         stage.show();
 
-        /*
-        DatabaseManager dbVideos = new DatabaseManager();
-        dbVideos.createDatabase();
-        dbVideos.createUsersTable();
-        dbVideos.createVideosTable();
-        dbVideos.createUser("'tak'", "'nie'", "'halo'", false);
-        dbVideos.upgradeToAdmin("'tak'");
-         */
+        //DatabaseManager dbVideos = new DatabaseManager();
+        //dbVideos.connectToDatabase();
+        //dbVideos.createUsersTable();
+        //dbVideos.createVideosTable();
+        //dbVideos.createAccount("'tak'", "'nie'", "'halo'", false);
+        //dbVideos.upgradeToAdmin("'tak'");
+        //dbVideos.displayAccountName("tak");
+        //dbVideos.displayAccount("tak");
+        //dbVideos.deleteAccount("tak");
     }
 }
