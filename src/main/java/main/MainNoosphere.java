@@ -36,5 +36,8 @@ public class MainNoosphere extends Application {
         //dbVideos.displayAccount("tak");
         //dbVideos.deleteAccount("tak");
         //dbVideos.inputVideo("'Walka'", "'nieznany'", "'akcja'", "'nieznany'", "'https://drive.google.com/file/d/1tJc8JTCd9mdlChpFwgaEFFso8un_DjYA/view?fbclid=IwAR1_Z6D6RfH0BMob6x8-Hr_DcMj0vZGmH877xqhvs_3Gm-e6jea1h8X0HNU'");
+        //dbVideos.displayInformationVideo("Walka", "nieznany");
+        //dbVideos.displaySourceVideo("Walka", "nieznany");
+
     }
 }

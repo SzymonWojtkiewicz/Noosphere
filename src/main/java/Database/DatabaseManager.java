@@ -106,6 +106,41 @@ public class DatabaseManager implements Database{
         }
     }
 
+    public void displayInformationVideo(String title, String director){
+        connectToDatabase();
+
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT title, director, genre, language FROM VIDEOS WHERE title = '" + title + "' AND director = '" + director + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            System.out.println(rs.getString("title"));
+            System.out.println(rs.getString("director"));
+            System.out.println(rs.getString("genre"));
+            System.out.println(rs.getString("language"));
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void displaySourceVideo(String title, String director){
+        connectToDatabase();
+
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT source FROM VIDEOS WHERE title = '" + title + "' AND director = '" + director + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            System.out.println(rs.getString("source"));
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public void createAccount(String username, String email, String password, boolean administrator){
         connectToDatabase();
 

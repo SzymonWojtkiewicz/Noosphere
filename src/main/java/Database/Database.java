@@ -10,6 +10,8 @@ public interface Database {
     public void createUsersTable();
     public void createVideosTable();
     public void inputVideo(String title, String director, String genre, String language, String source);
+    public void displayInformationVideo(String title, String director);
+    public void displaySourceVideo(String title, String director);
     public void createAccount(String username, String email, String password, boolean administrator);
     public void upgradeToAdmin(String username);
     public void downgradeToUser(String username);
