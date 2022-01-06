@@ -4,7 +4,6 @@ import java.sql.*;
 
 public class DatabaseManager implements Database{
     Connection conn = null;
-    ResultSet result = null;
     String dbName = "NOOSPHERE";
 
     public void connectToMysql(){
@@ -125,20 +124,21 @@ public class DatabaseManager implements Database{
         }
     }
 
-    public void displaySourceVideo(String title, String director){
+    public String displaySourceVideo(String title, String director){
         connectToDatabase();
-
+        String source = null;
         try {
             Statement stmt = conn.createStatement();
             String sql = "SELECT source FROM VIDEOS WHERE title = '" + title + "' AND director = '" + director + "'";
             ResultSet rs = stmt.executeQuery(sql);
             rs.next();
-            System.out.println(rs.getString("source"));
+            source = rs.getString("source");
             conn.close();
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+        return source;
     }
 
     public void createAccount(String username, String email, String password, boolean administrator){
@@ -248,6 +248,26 @@ public class DatabaseManager implements Database{
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public boolean ifAdminExists(){
+        connectToDatabase();
+        boolean adminExists = false;
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT administrator FROM USERS ";
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()){
+                if(rs.getBoolean("administrator") == true){
+                    adminExists = true;
+                    break;
+                }
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return adminExists;
     }
 
 }
