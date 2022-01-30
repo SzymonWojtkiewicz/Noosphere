@@ -1,10 +1,14 @@
 package controllers;
 
 import java.io.File;
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
@@ -29,7 +33,7 @@ public class MediaController implements Initializable{
     private Button playButton, pauseButton, rewatchButton;
 
     @FXML
-    private Slider progressBar; //TODO
+    private Slider progressBar;
 
     private File file;
     private Media media;
@@ -47,6 +51,34 @@ public class MediaController implements Initializable{
         mediaPlayer = new MediaPlayer(media);
 
         mediaView.setMediaPlayer(mediaPlayer);
+
+
+        mediaPlayer.currentTimeProperty().addListener(new ChangeListener<Duration>() {
+            @Override
+            public void changed(ObservableValue<? extends javafx.util.Duration> observable, javafx.util.Duration oldValue, javafx.util.Duration newValue) {
+                progressBar.setValue(newValue.toSeconds());
+
+            }
+
+
+
+
+        });
+
+        progressBar.setOnMousePressed(new EventHandler<MouseEvent>() {
+           @Override
+           public void handle(MouseEvent mouseEvent) {
+               mediaPlayer.seek(Duration.seconds(progressBar.getValue()));
+            }
+        });
+
+        progressBar.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                mediaPlayer.seek(Duration.seconds(progressBar.getValue()));
+            }
+        });
+
 
     }
 
