@@ -41,7 +41,7 @@
                   <Button fx:id="playButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#playMedia" text="Play" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
                   <Button fx:id="pauseButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pauseMedia" text="Pause" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                   <Button fx:id="rewatchButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rewatchMedia" text="Rewatch" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
-                  <Slider fx:id="progressBar" onDragDone="#progressBarDrag" GridPane.columnSpan="3" />
+                  <Slider fx:id="progressBar" onDragDetected="#progressBarDrag" GridPane.columnSpan="3" />
                </children>
             </GridPane>
          </children>
