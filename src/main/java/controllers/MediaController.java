@@ -79,6 +79,13 @@ public class MediaController implements Initializable{
             }
         });
 
+        mediaPlayer.setOnReady(new Runnable() {
+            @Override
+            public void run() {
+                Duration total = media.getDuration();
+                progressBar.setMax(total.toSeconds());
+            }
+        });
 
     }
 
@@ -105,8 +112,6 @@ public class MediaController implements Initializable{
     }
 
     public void progressBarDrag(MouseEvent event) {
-
-        //TODO - implement slider bar functions
 
     }
 
