@@ -5,64 +5,38 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="1267.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="1267.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainAppController">
    <children>
-      <VBox prefHeight="756.0" prefWidth="220.0">
+      <HBox prefHeight="756.0" prefWidth="1270.0">
          <children>
-            <HBox prefHeight="84.0" prefWidth="219.0">
+            <VBox prefHeight="756.0" prefWidth="1268.0">
                <children>
-                  <ChoiceBox prefHeight="84.0" prefWidth="57.0" />
-                  <BorderPane prefHeight="200.0" prefWidth="200.0">
-                     <center>
-                        <ImageView fitHeight="98.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                  <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="1048.0" spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="41.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../images/logos/Wariant2-2.png" />
                            </image>
                         </ImageView>
-                     </center>
-                  </BorderPane>
-               </children>
-            </HBox>
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="239.0" text="Video" />
-            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="461.0" />
-            <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="232.0" text="Foto" />
-            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="372.0" />
-            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="233.0" text="Music" />
-            <Separator orientation="VERTICAL" prefHeight="55.0" prefWidth="245.0" />
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="264.0" text="Library" />
-            <Separator orientation="VERTICAL" prefHeight="13.0" prefWidth="219.0" />
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="235.0" text="History" />
-            <Separator orientation="VERTICAL" prefHeight="4.0" prefWidth="232.0" />
-            <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="245.0" text="Your Videos" />
-            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="351.0" />
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="258.0" text="Watch Later" />
-            <Separator orientation="VERTICAL" prefHeight="7.0" prefWidth="362.0" />
-            <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="235.0" text="Liked videos" />
-            <Separator orientation="VERTICAL" prefHeight="16.0" prefWidth="362.0" />
-            <TreeView prefHeight="180.0" prefWidth="200.0" />
-            <Separator orientation="VERTICAL" prefHeight="16.0" prefWidth="230.0" />
-         </children>
-      </VBox>
-      <HBox prefHeight="756.0" prefWidth="1049.0">
-         <children>
-            <VBox prefHeight="756.0" prefWidth="1050.0">
-               <children>
-                  <HBox prefHeight="56.0" prefWidth="1048.0" spacing="20.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="61.0" text="Home" />
-                        <Button layoutX="468.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="72.0" text="My videos" />
-                        <Button layoutX="71.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="86.0" text="My account" />
-                        <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="59.0" text="Help" />
-                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="67.0" text="Settings" />
-                        <HBox prefHeight="28.0" prefWidth="269.0">
+                        <Button fx:id="homeButton" mnemonicParsing="false" onAction="#openSubWindow" prefHeight="30.0" prefWidth="61.0" text="Home" />
+                        <Button fx:id="myVideosButton" layoutX="468.0" layoutY="10.0" mnemonicParsing="false" onAction="#openSubWindow" prefHeight="28.0" prefWidth="72.0" text="My videos" />
+                        <Button fx:id="myAccountButton" layoutX="71.0" layoutY="10.0" mnemonicParsing="false" onAction="#openSubWindow" prefHeight="28.0" prefWidth="86.0" text="My account" />
+                        <Button fx:id="addVideoButton" layoutX="183.0" layoutY="10.0" mnemonicParsing="false" onAction="#openSubWindow" prefHeight="28.0" prefWidth="74.0" text="Add video" />
+                        <Button fx:id="playerButton" layoutX="462.0" layoutY="10.0" mnemonicParsing="false" onAction="#openSubWindow" prefHeight="28.0" prefWidth="50.0" text="Player" />
+                        <Button fx:id="helpButton" layoutX="383.0" layoutY="10.0" mnemonicParsing="false" onAction="#openSubWindow" prefHeight="28.0" prefWidth="50.0" text="Help" />
+                        <Button fx:id="settingsButton" layoutX="453.0" layoutY="10.0" mnemonicParsing="false" onAction="#openSubWindow" prefHeight="28.0" prefWidth="65.0" text="Settings" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="269.0">
                            <children>
-                              <TextField prefHeight="28.0" prefWidth="215.0" text="look for..." />
-                              <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="54.0" text="Search" />
+                              <TextField fx:id="searchTextField" prefHeight="28.0" prefWidth="215.0" promptText="look for..." />
+                              <Button fx:id="searchButton" mnemonicParsing="false" prefHeight="28.0" prefWidth="54.0" text="Search" />
                            </children>
                         </HBox>
                      </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
                   </HBox>
-                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="756.0" prefWidth="1267.0">
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="728.0" prefWidth="1289.0">
                      <content>
                         <GridPane fx:id="videosGridPane" hgap="10.0" style="-fx-grid-lines-visible: false;" vgap="10.0">
                            <columnConstraints>
