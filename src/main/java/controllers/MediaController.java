@@ -6,6 +6,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import java.net.URL;
+import java.sql.DriverManager;
 import java.util.ResourceBundle;
 
 import javafx.event.EventHandler;
@@ -43,8 +44,8 @@ public class MediaController implements Initializable{
 
     public void initialize(URL arg0, ResourceBundle arg1) {
 
-        file = new File("src/main/resources/videos/video.mp4"
-        );
+
+        file = new File("src/main/resources/videos/video.mp4");
 
         media = new Media(file.toURI().toString());
 
