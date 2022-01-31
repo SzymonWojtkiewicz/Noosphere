@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!--Your comment-->
+
+<VBox prefHeight="382.0" prefWidth="519.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddVideoController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <VBox prefHeight="70.0" prefWidth="275.0" spacing="5.0">
+                     <children>
+                        <Label fx:id="nameLabel" prefHeight="17.0" prefWidth="292.0" text="Tilte" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nameTextField" prefHeight="49.0" prefWidth="249.0" />
+                        <Label fx:id="usernameInfoLabel1" text="&lt;incorrect data&gt;" textFill="#c0392b" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fillWidth="false" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <VBox prefHeight="70.0" prefWidth="248.0" spacing="5.0">
+               <children>
+                  <Label fx:id="directorLabel" text="Director">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="directorTextField" prefHeight="25.0" prefWidth="239.0" />
+                  <Label fx:id="directorInfoLabel" text="&lt;incorrect data&gt;" textFill="#c0392b" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox fillWidth="false" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <VBox prefHeight="69.0" prefWidth="248.0" spacing="5.0">
+               <children>
+                  <Label fx:id="pictureLabel" text="Tilte Screen Source">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pictureTextField" prefHeight="25.0" prefWidth="238.0" />
+                  <Label fx:id="pictureInfoLabel" text="&lt;incorrect data&gt;" textFill="#c0392b" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <VBox prefHeight="71.0" prefWidth="258.0" spacing="5.0">
+                     <children>
+                        <Label fx:id="videoLabel" text="Vdeo Source">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="videoTextField" />
+                        <Label fx:id="videoInfoLabel" text="&lt;Incorrect data&gt;" textFill="#c0392b" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label fx:id="uploadErrorLabel" prefHeight="17.0" prefWidth="248.0" text="&lt;Upload Failed&gt;" textFill="#c0392b" />
+                  <Button fx:id="clearButton" mnemonicParsing="false" text="Clear" />
+                  <Button fx:id="addAccountButton" mnemonicParsing="false" text="Add" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
