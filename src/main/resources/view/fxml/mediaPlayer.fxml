@@ -10,6 +10,8 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <!--Your comment-->
 
@@ -38,10 +40,34 @@
 
               </rowConstraints>
                <children>
-                  <Button fx:id="playButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#playMedia" text="Play" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
-                  <Button fx:id="pauseButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pauseMedia" text="Pause" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button fx:id="rewatchButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rewatchMedia" text="Rewatch" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+                  <Button fx:id="playButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#playMedia" prefWidth="178.0" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="pauseButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pauseMedia" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="rewatchButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rewatchMedia" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
                   <Slider fx:id="progressBar" onDragDetected="#progressBarDrag" GridPane.columnSpan="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="▶" textAlignment="CENTER" wrappingWidth="233.9830665588379" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="||" textAlignment="CENTER" wrappingWidth="232.484375" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="█" textAlignment="CENTER" wrappingWidth="234.00003051757812" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
                </children>
             </GridPane>
          </children>

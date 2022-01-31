@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Slider?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
 
 <!--Your comment-->
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MediaController">
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MediaController">
    <children>
       <VBox alignment="CENTER" prefHeight="500.0" prefWidth="700.0">
          <children>
@@ -38,9 +32,9 @@
 
               </rowConstraints>
                <children>
-                  <Button fx:id="playButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#playMedia" text="Play" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
-                  <Button fx:id="pauseButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pauseMedia" text="Pause" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button fx:id="rewatchButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rewatchMedia" text="Rewatch" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+                  <Button fx:id="playButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#playMedia" text="▶" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                  <Button fx:id="pauseButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pauseMedia" text="||" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="rewatchButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rewatchMedia" text="∎" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
                   <Slider fx:id="progressBar" onDragDetected="#progressBarDrag" GridPane.columnSpan="3" />
                </children>
             </GridPane>
