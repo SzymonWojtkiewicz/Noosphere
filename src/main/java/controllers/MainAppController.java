@@ -11,16 +11,17 @@ import javafx.scene.layout.Pane;
 
 public class MainAppController
 {
-    //zmienna do testów
+    //te dwie zmienne są tylko do testów
+    private final static String registrationScreen = "registrationScreen";
     private final static String loginScreen = "loginScreen";
 
     private final static String homeScreen = "homeScreen";
-    private final static String myVideosScreen = "AddVideo";
-    private final static String myAccountScreen = "myAccountScreen";
+    private final static String myVideosScreen = "";
+    private final static String myAccountScreen = "mainAppUserSettings";
     private final static String addVideoScreen = "mainAppMediaTransfer";
     private final static String playerScreen = "mediaPlayer";
     private final static String helpScreen = "";
-    private final static String settingsScreen = "settingsScreen";
+    private final static String settingsScreen = "";
 
     @FXML
     private GridPane videosGridPane;
@@ -61,11 +62,11 @@ public class MainAppController
                 showSearchField(true);
                 break;
             case "myVideosButton":
-                windowName = myVideosScreen;
+                windowName = loginScreen;
                 showSearchField(true);
                 break;
             case "myAccountButton":
-                windowName = myAccountScreen;
+                windowName = registrationScreen;
                 showSearchField(false);
                 break;
             case "addVideoButton":
