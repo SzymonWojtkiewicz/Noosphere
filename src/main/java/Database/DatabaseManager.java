@@ -4,7 +4,6 @@ import java.sql.*;
 
 public class DatabaseManager implements Database{
     Connection conn = null;
-    ResultSet result = null;
     String dbName = "NOOSPHERE";
 
     public void connectToMysql(){
@@ -64,7 +63,7 @@ public class DatabaseManager implements Database{
 
         try {
             Statement stmt = conn.createStatement();
-            String sql = "CREATE TABLE USERS (id INTEGER not NULL AUTO_INCREMENT, username VARCHAR(255), email VARCHAR(255)," +
+            String sql = "CREATE TABLE USERS (id INTEGER not NULL AUTO_INCREMENT, name VARCHAR(255), surname VARCHAR(255), username VARCHAR(255), email VARCHAR(255)," +
                     " password VARCHAR(255), administrator BIT, UNIQUE(username, email), PRIMARY KEY (id))";
             stmt.executeUpdate(sql);
             System.out.println("Created table");
@@ -106,12 +105,48 @@ public class DatabaseManager implements Database{
         }
     }
 
-    public void createAccount(String username, String email, String password, boolean administrator){
+    public void displayInformationVideo(String title, String director){
         connectToDatabase();
 
         try {
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO USERS (username, email, password, administrator) VALUES ( " +username+ ", " +email+ ", " +password+ ", " +administrator+ ")";
+            String sql = "SELECT title, director, genre, language FROM VIDEOS WHERE title = '" + title + "' AND director = '" + director + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            System.out.println(rs.getString("title"));
+            System.out.println(rs.getString("director"));
+            System.out.println(rs.getString("genre"));
+            System.out.println(rs.getString("language"));
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public String displaySourceVideo(String title, String director){
+        connectToDatabase();
+        String source = null;
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT source FROM VIDEOS WHERE title = '" + title + "' AND director = '" + director + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            source = rs.getString("source");
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return source;
+    }
+
+    public void createAccount(String name, String surname, String username, String email, String password, boolean administrator){
+        connectToDatabase();
+
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "INSERT INTO USERS (name, surname, username, email, password, administrator) VALUES ( " +name+ ", " +surname+ ", " +username+ ", " +email+ ", " +password+ ", " +administrator+ ")";
             stmt.executeUpdate(sql);
             System.out.println("Created user");
             conn.close();
@@ -173,9 +208,11 @@ public class DatabaseManager implements Database{
 
         try {
             Statement stmt = conn.createStatement();
-            String sql = "SELECT username, email FROM USERS WHERE username = '" + username + "'";
+            String sql = "SELECT name, surname, username, email FROM USERS WHERE username = '" + username + "'";
             ResultSet rs = stmt.executeQuery(sql);
             rs.next();
+            System.out.println(rs.getString("name"));
+            System.out.println(rs.getString("surname"));
             System.out.println(rs.getString("username"));
             System.out.println(rs.getString("email"));
             checkIfAdmin(username);
@@ -212,6 +249,56 @@ public class DatabaseManager implements Database{
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+        }
+    }
+
+    public boolean ifAdminExists(){
+        connectToDatabase();
+        boolean adminExists = false;
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT administrator FROM USERS ";
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()){
+                if(rs.getBoolean("administrator") == true){
+                    adminExists = true;
+                    break;
+                }
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return adminExists;
+    }
+
+    public String checkEmail(String checkedEmail){
+        connectToDatabase();
+
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT email FROM USERS WHERE email = '" + checkedEmail + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            return rs.getString("email");
+
+        } catch (SQLException e) {
+            return e.getMessage();
+        }
+    }
+
+    public String checkUsername(String checkedUsername){
+        connectToDatabase();
+
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT username FROM USERS WHERE username = '" + checkedUsername + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            return rs.getString("username");
+
+        } catch (SQLException e) {
+            return e.getMessage();
         }
     }
 
