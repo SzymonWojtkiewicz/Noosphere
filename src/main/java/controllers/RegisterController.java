@@ -1,5 +1,6 @@
 package controllers;
 
+import Database.DatabaseManager;
 import appSettings.AppSettings;
 import appSettings.MultiLanguageStringGetter;
 import colorSchemes.ColorPallets;
@@ -12,7 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 
-public class RegisterController
+public class RegisterController extends DatabaseManager
 {
     @FXML
     private TextField nameTextField;
@@ -84,6 +85,7 @@ public class RegisterController
     }
 
     @FXML
+
     public void CreateAccount(ActionEvent actionEvent) throws Exception
     {
         String name = nameTextField.getText();
@@ -111,7 +113,8 @@ public class RegisterController
         {
             createAccountErrorLabel.setTextFill(Color.web(AppSettings.successColor()));
             createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("AccountCreatedSuccessfully!"));
-            //TODO: Przeslanie danych do bazy danych
+
+            createAccount(name, surname, username, email, password, false);
         }
     }
 
@@ -120,8 +123,12 @@ public class RegisterController
     {
         String username = usernameTextField.getText();
 
-        //TODO: Sprawdzenie czy podana nazwa uzytkownika nie jest zajeta (zmienna `isTaken`)
+
         boolean isTaken = false;
+
+        if (checkUsername(username).equals(username)){
+            isTaken = true;
+        }
 
         if(isTaken) //sprawdz czy nazwa uzytkownika jest zajeta
         {
@@ -146,8 +153,12 @@ public class RegisterController
                 "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
                 "A-Z]{2,7}$";
 
-        //TODO: Sprawdzenie czy email juz istnieje w bazie danych (zmienna `isTaken`)
+
         boolean isTaken = false;
+
+        if (checkEmail(email).equals(email)){
+            isTaken = true;
+        }
 
         //Sprawdzamy czy podany email ma budowe emaila
         if(!email.matches(emailRegex))
@@ -212,4 +223,5 @@ public class RegisterController
         else
             isPasswordValid = false;
     }
+
 }

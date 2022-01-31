@@ -9,7 +9,7 @@ public interface Database {
     public void inputVideo(String title, String director, String genre, String language, String source);
     public void displayInformationVideo(String title, String director);
     public String displaySourceVideo(String title, String director);
-    public void createAccount(String username, String email, String password, boolean administrator);
+    public void createAccount(String name, String surname, String username, String email, String password, boolean administrator);
     public void upgradeToAdmin(String username);
     public void downgradeToUser(String username);
     public void displayAccountName(String username);
