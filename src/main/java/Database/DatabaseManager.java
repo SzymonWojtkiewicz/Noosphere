@@ -70,7 +70,7 @@ public class DatabaseManager implements Database{
      * inputting video into videos table in database
      * @param title title of the video
      * @param director video director
-     * @param photo video picture
+     * @param photo video image
      * @param source video source
      */
     public void inputVideo(String title, String director, String photo, String source){
@@ -117,8 +117,8 @@ public class DatabaseManager implements Database{
     /**
      * displaying source video
      * @param title searched title of the video source
-     * @param director searched director of the video source
-     * @return
+     * @param director searched director of video source
+     * @return returns string source of video
      */
     public String displaySourceVideo(String title, String director){
         connectToDatabase();
@@ -135,6 +135,30 @@ public class DatabaseManager implements Database{
             System.out.println(e.getMessage());
         }
         return source;
+    }
+
+
+    /**
+     * displaying video image source
+     * @param title searched title of the video image
+     * @param director searched director of video image
+     * @return returns string source of video image
+     */
+    public String displayImageVideo(String title, String director){
+        connectToDatabase();
+        String image = null;
+        try {
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT photo FROM VIDEOS WHERE title = '" + title + "' AND director = '" + director + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            image = rs.getString("photo");
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return image;
     }
 
 

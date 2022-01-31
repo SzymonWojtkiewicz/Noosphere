@@ -41,6 +41,7 @@ public class MainNoosphere extends Application {
         //dbVideos.inputVideo("Walka", "nieznany", "https://drive.google.com/open?id=1-RLzpGiTMKzPejDts7UU9V7LBVA_tqzV&authuser=piotrdrobina%40gmail.com&usp=drive_fs", "https://drive.google.com/file/d/1tJc8JTCd9mdlChpFwgaEFFso8un_DjYA/view?fbclid=IwAR1_Z6D6RfH0BMob6x8-Hr_DcMj0vZGmH877xqhvs_3Gm-e6jea1h8X0HNU");
         //dbVideos.displayInformationVideo("Walka", "nieznany");
         //System.out.println(dbVideos.displaySourceVideo("Walka", "nieznany"));
+        //System.out.println(dbVideos.displayImageVideo("walka", "nieznany"));
         //System.out.println(dbVideos.ifAdminExists());
 
 
