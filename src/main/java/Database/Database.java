@@ -4,7 +4,7 @@ public interface Database {
     public void connectToDatabase();
     public void createUsersTable();
     public void createVideosTable();
-    public void inputVideo(String title, String director, String genre, String language, String source);
+    public void inputVideo(String title, String director, String photo, String source);
     public void displayInformationVideo(String title, String director);
     public String displaySourceVideo(String title, String director);
     public void createAccount(String name, String surname, String username, String email, String password, boolean administrator);

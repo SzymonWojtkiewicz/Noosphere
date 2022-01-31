@@ -54,8 +54,8 @@ public class DatabaseManager implements Database{
 
         try {
             Statement stmt = conn.createStatement();
-            String sql = "CREATE TABLE VIDEOS (id INTEGER not NULL AUTO_INCREMENT, title VARCHAR(255), director VARCHAR(255), genre VARCHAR(255)," +
-                    " language VARCHAR(255), source VARCHAR(255), PRIMARY KEY (id))";
+            String sql = "CREATE TABLE VIDEOS (id INTEGER not NULL AUTO_INCREMENT, title VARCHAR(255), director VARCHAR(255), " +
+                    " photo VARCHAR(255), source VARCHAR(255), PRIMARY KEY (id))";
             stmt.executeUpdate(sql);
             System.out.println("Created table");
             conn.close();
@@ -70,16 +70,15 @@ public class DatabaseManager implements Database{
      * inputting video into videos table in database
      * @param title title of the video
      * @param director video director
-     * @param genre video genre
-     * @param language video language
+     * @param photo video picture
      * @param source video source
      */
-    public void inputVideo(String title, String director, String genre, String language, String source){
+    public void inputVideo(String title, String director, String photo, String source){
         connectToDatabase();
 
         try {
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO VIDEOS (title, director, genre, language, source) VALUES ( " +title+ ", " +director+ ", " +genre+ ", " +language+ ", " +source+ ")";
+            String sql = "INSERT INTO VIDEOS (title, director, photo, source) VALUES ( '" +title+ "', '" +director+ "', '" +photo+ "', '" +source+ "')";
             stmt.executeUpdate(sql);
             System.out.println("Inputted video successfully");
             conn.close();
