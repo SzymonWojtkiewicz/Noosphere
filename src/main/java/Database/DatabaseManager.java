@@ -4,29 +4,15 @@ import java.sql.*;
 
 public class DatabaseManager implements Database{
     Connection conn = null;
-    String dbName = "NOOSPHERE";
 
-    public void connectToMysql(){
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/?" + "user=root&password=");
 
-            if(conn != null){
-                System.out.println("Connected");
-            }
-
-        } catch (Exception ex){
-            System.out.println("Unable to connect");
-            System.out.println("SQLException: " + ex.getMessage());
-        }
-
-    }
-
+    //connecting to database
     public void connectToDatabase(){
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             //connecting to local database
             //conn = DriverManager.getConnection("jdbc:mysql://localhost/" +dbName+ "?user=root&password=");
+
             //connecting to remote database
             String url = "jdbc:mysql://192.166.219.220/bigflex";
             conn = DriverManager.getConnection(url, "bigflex", "f5IyhvPF..");
@@ -43,21 +29,8 @@ public class DatabaseManager implements Database{
 
     }
 
-    public void createDatabase(){
-        if(conn == null){
-            connectToMysql();
-        }
-        try {
-            Statement stmt = conn.createStatement();
-            String sql = "CREATE DATABASE "+ dbName;
-            stmt.executeUpdate(sql);
-            System.out.println("Created database");
 
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
+    //creating users table in database
     public void createUsersTable(){
         connectToDatabase();
 
@@ -74,6 +47,8 @@ public class DatabaseManager implements Database{
         }
     }
 
+
+    //creating videos table in database
     public void createVideosTable(){
         connectToDatabase();
 
@@ -90,6 +65,15 @@ public class DatabaseManager implements Database{
         }
     }
 
+
+    /**
+     * inputting video into videos table in database
+     * @param title title of the video
+     * @param director video director
+     * @param genre video genre
+     * @param language video language
+     * @param source video source
+     */
     public void inputVideo(String title, String director, String genre, String language, String source){
         connectToDatabase();
 
@@ -105,6 +89,12 @@ public class DatabaseManager implements Database{
         }
     }
 
+
+    /**
+     * displaying information of video
+     * @param title searched title of the video
+     * @param director searched director of the video
+     */
     public void displayInformationVideo(String title, String director){
         connectToDatabase();
 
@@ -124,6 +114,13 @@ public class DatabaseManager implements Database{
         }
     }
 
+
+    /**
+     * displaying source video
+     * @param title searched title of the video source
+     * @param director searched director of the video source
+     * @return
+     */
     public String displaySourceVideo(String title, String director){
         connectToDatabase();
         String source = null;
@@ -141,12 +138,22 @@ public class DatabaseManager implements Database{
         return source;
     }
 
+
+    /**
+     * creating account
+     * @param name name of user
+     * @param surname surname of user
+     * @param username username that user wants to set
+     * @param email user's email
+     * @param password user's password
+     * @param administrator creating normal(false) or admin account(true)
+     */
     public void createAccount(String name, String surname, String username, String email, String password, boolean administrator){
         connectToDatabase();
 
         try {
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO USERS (name, surname, username, email, password, administrator) VALUES ( " +name+ ", " +surname+ ", " +username+ ", " +email+ ", " +password+ ", " +administrator+ ")";
+            String sql = "INSERT INTO USERS (name, surname, username, email, password, administrator) VALUES ( '" +name+ "', '" +surname+ "', '" +username+ "', '" +email+ "', '" +password+ "', " +administrator+ ")";
             stmt.executeUpdate(sql);
             System.out.println("Created user");
             conn.close();
@@ -157,6 +164,11 @@ public class DatabaseManager implements Database{
 
     }
 
+
+    /**
+     * if we want to upgrade normal user to admin permissions
+     * @param username username of the account we want to upgrade
+     */
     public void upgradeToAdmin(String username){
         connectToDatabase();
 
@@ -172,6 +184,11 @@ public class DatabaseManager implements Database{
         }
     }
 
+
+    /**
+     * if we want to downgrade admin to user permissions
+     * @param username username of the account we want to downgrade
+     */
     public void downgradeToUser(String username){
         connectToDatabase();
 
@@ -187,6 +204,13 @@ public class DatabaseManager implements Database{
         }
     }
 
+
+    /**
+     * Is this method even necessary?
+     *
+     * displaying account name
+     * @param username username of the account we want to display
+     */
     public void displayAccountName(String username){
         connectToDatabase();
 
@@ -203,6 +227,11 @@ public class DatabaseManager implements Database{
         }
     }
 
+
+    /**
+     * displaying account name, surname, username, email
+     * @param username username of the user we want to display
+     */
     public void displayAccount(String username){
         connectToDatabase();
 
@@ -223,6 +252,11 @@ public class DatabaseManager implements Database{
         }
     }
 
+
+    /**
+     * chcecking if the account has admin permissions
+     * @param username username of account we want to check
+     */
     public void checkIfAdmin(String username){
         try {
             Statement stmt = conn.createStatement();
@@ -237,6 +271,11 @@ public class DatabaseManager implements Database{
         }
     }
 
+
+    /**
+     * deleting account method
+     * @param username username of account we want to delete
+     */
     public void deleteAccount(String username) {
         connectToDatabase();
 
@@ -252,6 +291,11 @@ public class DatabaseManager implements Database{
         }
     }
 
+
+    /**
+     * checking if admin account exists
+     * @return returns if it exists (true) or not (false)
+     */
     public boolean ifAdminExists(){
         connectToDatabase();
         boolean adminExists = false;
@@ -272,6 +316,12 @@ public class DatabaseManager implements Database{
         return adminExists;
     }
 
+
+    /**
+     * submethod for checking if the email already is in database
+     * @param checkedEmail email we want to check
+     * @return returns email if it is in database
+     */
     public String checkEmail(String checkedEmail){
         connectToDatabase();
 
@@ -287,6 +337,12 @@ public class DatabaseManager implements Database{
         }
     }
 
+
+    /**
+     * submethod for checking if the username already is in database
+     * @param checkedUsername username we want to check
+     * @return returns username if it is in database
+     */
     public String checkUsername(String checkedUsername){
         connectToDatabase();
 
@@ -302,4 +358,23 @@ public class DatabaseManager implements Database{
         }
     }
 
+
+    /**
+     * method for checking if the email already exists
+     * @param email email we want to check
+     * @return returns true if email exists
+     */
+    public boolean emailChecked(String email){
+        return checkEmail(email).equals(email);
+    }
+
+
+    /**
+     * method for checking if the username already exists
+     * @param username username we want to check
+     * @return returns true if username exists
+     */
+    public boolean usernameChecked(String username){
+        return checkUsername(username).equals(username);
+    }
 }

@@ -82,6 +82,8 @@ public class RegisterController extends DatabaseManager
         passwordInfoLengthLabel.setText(MultiLanguageStringGetter.getString("Minimum8Characters"));
         passwordInfoDigitLabel.setText(MultiLanguageStringGetter.getString("MinimumOneDigit"));
         passwordInfoLetterLabel.setText(MultiLanguageStringGetter.getString("MinimumOneCapitalLetter"));
+
+
     }
 
     @FXML
@@ -103,8 +105,12 @@ public class RegisterController extends DatabaseManager
             createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("NotAllFieldsHaveBeenCompleted!"));
         else if(!isUsernameValid)
             createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("GivenUserNameIsInvalid!!"));
+        else if(usernameChecked(username))
+            createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("GivenUserNameIsUnavailable!"));
         else if(!isEmailValid)
             createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("GivenEmailAddressIsInvalid!"));
+        else if(emailChecked(email))
+            createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("GivenEmailAddressIsUnavailable!"));
         else if(!isPasswordValid)
             createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("ThePasswordYouEnterDoesNotMeetTheSecurityRequirements!"));
         else if(!password.equals(passwordConfirm))
@@ -125,10 +131,6 @@ public class RegisterController extends DatabaseManager
 
 
         boolean isTaken = false;
-
-        if (checkUsername(username).equals(username)){
-            isTaken = true;
-        }
 
         if(isTaken) //sprawdz czy nazwa uzytkownika jest zajeta
         {
@@ -153,12 +155,7 @@ public class RegisterController extends DatabaseManager
                 "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
                 "A-Z]{2,7}$";
 
-
         boolean isTaken = false;
-
-        if (checkEmail(email).equals(email)){
-            isTaken = true;
-        }
 
         //Sprawdzamy czy podany email ma budowe emaila
         if(!email.matches(emailRegex))
@@ -223,5 +220,6 @@ public class RegisterController extends DatabaseManager
         else
             isPasswordValid = false;
     }
+
 
 }

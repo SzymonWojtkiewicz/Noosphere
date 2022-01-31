@@ -29,11 +29,11 @@ public class MainNoosphere extends Application {
         stage.show();
 
         //DatabaseManager dbVideos = new DatabaseManager();
-        /*
+
         //dbVideos.connectToDatabase();
         //dbVideos.createUsersTable();
         //dbVideos.createVideosTable();
-        //dbVideos.createAccount("'tak'", "'nie'", "'halo'", false);
+        //dbVideos.createAccount("Jan", "Pawel", "Papiez", "taktaktak.tak", "JeszczeJak", false);
         //dbVideos.upgradeToAdmin("'tak'");
         //dbVideos.displayAccountName("tak");
         //dbVideos.displayAccount("tak");
@@ -43,7 +43,7 @@ public class MainNoosphere extends Application {
         //System.out.println(dbVideos.displaySourceVideo("Walka", "nieznany"));
         //System.out.println(dbVideos.ifAdminExists());
 
-         */
+
 
     }
 }

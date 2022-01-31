@@ -1,9 +1,7 @@
 package Database;
 
 public interface Database {
-    public void connectToMysql();
     public void connectToDatabase();
-    public void createDatabase();
     public void createUsersTable();
     public void createVideosTable();
     public void inputVideo(String title, String director, String genre, String language, String source);
