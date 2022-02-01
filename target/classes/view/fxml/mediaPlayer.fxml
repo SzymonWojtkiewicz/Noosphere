@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Slider?>
@@ -10,41 +11,73 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
 
 <!--Your comment-->
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MediaController">
-   <children>
-      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="700.0">
-         <children>
-            <BorderPane prefHeight="200.0" prefWidth="200.0">
-               <center>
-                  <MediaView fx:id="mediaView" fitHeight="400.0" fitWidth="600.0" BorderPane.alignment="CENTER">
-                     <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                     </cursor>
-                  </MediaView>
-               </center>
-            </BorderPane>
-            <GridPane prefWidth="694.0" VBox.vgrow="SOMETIMES">
-              <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MediaController">
 
-              </rowConstraints>
-               <children>
-                  <Button fx:id="playButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#playMedia" text="Play" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
-                  <Button fx:id="pauseButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pauseMedia" text="Pause" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button fx:id="rewatchButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rewatchMedia" text="Rewatch" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
-                  <Slider fx:id="progressBar" onDragDetected="#progressBarDrag" GridPane.columnSpan="3" />
-               </children>
-            </GridPane>
-         </children>
-      </VBox>
-   </children>
+    <children>
+        <VBox alignment="CENTER" prefHeight="500.0" prefWidth="700.0">
+            <children>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <center>
+                        <MediaView fx:id="mediaView" fitHeight="400.0" fitWidth="600.0" BorderPane.alignment="CENTER">
+                            <cursor>
+                                <Cursor fx:constant="DEFAULT" />
+                            </cursor>
+                        </MediaView>
+                    </center>
+                </BorderPane>
+                <GridPane prefWidth="694.0" VBox.vgrow="SOMETIMES">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+                    </rowConstraints>
+                    <children>
+                        <Button fx:id="playButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#playMedia" prefWidth="178.0" text="▶" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                     <GridPane.margin>
+                        <Insets left="80.0" right="80.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets top="1.0" />
+                     </padding></Button>
+                        <Button fx:id="pauseButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pauseMedia" text="⏸" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                     <GridPane.margin>
+                        <Insets left="80.0" right="80.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets top="1.0" />
+                     </padding></Button>
+                        <Button fx:id="rewatchButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rewatchMedia" text="■" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                     <GridPane.margin>
+                        <Insets left="80.0" right="80.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets top="1.0" />
+                     </padding></Button>
+                        <Slider fx:id="progressBar" onDragDetected="#progressBarDrag" GridPane.columnSpan="3">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin></Slider>
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+    </children>
 </AnchorPane>
