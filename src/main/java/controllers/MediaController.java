@@ -45,9 +45,9 @@ public class MediaController implements Initializable{
     public void initialize(URL arg0, ResourceBundle arg1) {
 
 
-        file = new File("src/main/resources/videos/video.mp4");
 
-        media = new Media(file.toURI().toString());
+
+        media = new Media("https://drive.google.com/uc?export=download&id=1tJc8JTCd9mdlChpFwgaEFFso8un_DjYA");
 
         mediaPlayer = new MediaPlayer(media);
 
