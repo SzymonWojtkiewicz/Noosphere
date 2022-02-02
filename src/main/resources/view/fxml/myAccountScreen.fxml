@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="656" prefWidth="1270" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccountController">
+   <children>
+      <Label fx:id="mainLabel" text="Your Account" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="200.0" spacing="53.0">
+               <children>
+                  <Label fx:id="usernameLabel" layoutX="98.0" layoutY="20.0" text="Username">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="firstNameLabel" text="First Name">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lastNameLabel" layoutX="98.0" layoutY="20.0" text="Last Name">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="emailLabel" layoutX="101.0" layoutY="70.0" text="Email">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="passwordLabel" layoutX="148.0" layoutY="120.0" text="Password">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="accountStatusLabel" layoutX="110.0" layoutY="170.0" text="Account Status">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="errorLabel" alignment="TOP_LEFT" prefHeight="86.0" prefWidth="180.0" text="Label" textFill="#c0392b" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="400.0" spacing="50.0">
+               <children>
+                  <TextField fx:id="usernameField" disable="true" editable="false" layoutX="20.0" layoutY="20.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="firstNameField">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="lastNameField" layoutX="20.0" layoutY="20.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="emailField" alignment="CENTER" disable="true" editable="false" layoutX="20.0" layoutY="71.0" text="example@gmail.com">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField alignment="CENTER" disable="true" editable="false" text="12345678910">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <Label fx:id="accountStatusText" text="User/Admin">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="TOP_RIGHT" prefHeight="32.0" prefWidth="380.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="mainSaveButton" mnemonicParsing="false" text="Save" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="150.0" spacing="57.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="175.0" />
+               </padding>
+               <children>
+                  <Button fx:id="changeEmailButton" layoutX="20.0" layoutY="95.0" mnemonicParsing="false" text="Change email" />
+                  <Button fx:id="changePasswordButton" layoutX="20.0" layoutY="170.0" mnemonicParsing="false" text="Change password" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <Separator fx:id="changeSeparator" orientation="VERTICAL" prefHeight="200.0" />
+            <HBox fx:id="changeHBox" prefHeight="100.0" prefWidth="500.0">
+               <children>
+                  <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="250.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="changeLabel" text="Change password/email">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="changeNewLabel" alignment="TOP_LEFT" layoutX="15.0" layoutY="41.0" text="New password">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="repeatNewPasswordLabel" layoutX="15.0" layoutY="102.0" text="Repeat new password">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="oldPasswordLabel" layoutX="15.0" layoutY="20.0" text="Old password">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="changeErrorLabel" alignment="TOP_LEFT" layoutX="130.0" layoutY="152.0" prefHeight="99.0" prefWidth="240.0" text="Error" textFill="#c0392b" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="250.0" spacing="20.0">
+                     <children>
+                        <TextField disable="true" editable="false" visible="false" />
+                        <TextField fx:id="changeNewEmail" layoutX="15.0" layoutY="20.0" />
+                        <PasswordField fx:id="changeNewPassword" />
+                        <PasswordField fx:id="repeatNewPasswordField" />
+                        <PasswordField fx:id="oldPasswordField" />
+                        <HBox alignment="TOP_RIGHT" prefHeight="41.0" prefWidth="240.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="changeCancelButton" mnemonicParsing="false" text="Cancel" />
+                              <Button fx:id="changeSaveButton" mnemonicParsing="false" text="Save" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
