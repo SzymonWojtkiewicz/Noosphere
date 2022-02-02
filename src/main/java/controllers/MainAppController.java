@@ -11,13 +11,12 @@ import javafx.scene.layout.Pane;
 
 public class MainAppController
 {
-    //te dwie zmienne są tylko do testów
-    private final static String registrationScreen = "registrationScreen";
+    //zmienna do testów
     private final static String loginScreen = "loginScreen";
 
     private final static String homeScreen = "homeScreen";
     private final static String myVideosScreen = "";
-    private final static String myAccountScreen = "mainAppUserSettings";
+    private final static String myAccountScreen = "myAccountScreen";
     private final static String addVideoScreen = "mainAppMediaTransfer";
     private final static String playerScreen = "mediaPlayer";
     private final static String helpScreen = "";
@@ -66,7 +65,7 @@ public class MainAppController
                 showSearchField(true);
                 break;
             case "myAccountButton":
-                windowName = registrationScreen;
+                windowName = myAccountScreen;
                 showSearchField(false);
                 break;
             case "addVideoButton":
