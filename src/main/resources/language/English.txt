@@ -18,3 +18,20 @@ $PasswordsDoNotMatch!$Passwords do not match!
 $AccountCreatedSuccessfully!$Account created successfully!
 $IncorrectFormOfEmailAddress!$Incorrect form of email address!
 $GivenEmailAddressIsTaken!$Given email address is taken!
+$MyAccountTitle$My Account
+$AccountStatus$Account Status
+$ChangeEmail$Change email
+$ChangePassword$Change password
+$Save$Save
+$NewEmail$New email
+$NewPassword$New password
+$RepeatNewPassword$Repeat new password
+$OldPassword$Old password
+$NewPasswordDoesNotMatchRepeatPassword$New password does not match repeated password!
+$OldPasswordDoesNotMatchCurrentPassword$Old password does not match your current password!
+$ChangeEmailSuccess$Email was changed successfully!
+$ChangePasswordSuccess$Password was changed successfully!
+$SaveAccountChangesSuccess$Account changes were changed successfully!
+$StatusUser$User
+$StatusAdmin$Admin
+$PasswordRequirements$New password must have minimum 8 chars, 1 digit and 1 special character!
