@@ -1,13 +1,21 @@
 package controllers;
 
+import appSettings.AppSettings;
 import appSettings.MultiLanguageStringGetter;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
+import main.MainNoosphere;
+import Database.DatabaseManager;
 
-public class AddVideoController {
+import java.io.IOException;
+import java.io.UncheckedIOException;
+
+public class AddVideoController extends DatabaseManager
+{
 
     @FXML
     private Button addAccountButton;
@@ -63,20 +71,70 @@ public class AddVideoController {
         videoInfoLabel.setVisible(false);
         uploadErrorLabel.setVisible(false);
 
-        nameLabel.setText(MultiLanguageStringGetter.getString(" "));
-        nameTextField.setText(MultiLanguageStringGetter.getString(" "));
-        usernameInfoLabel1.setText(MultiLanguageStringGetter.getString(" "));
-        directorLabel.setText(MultiLanguageStringGetter.getString(" "));
-        directorTextField.setText(MultiLanguageStringGetter.getString(" "));
-        directorInfoLabel.setText(MultiLanguageStringGetter.getString(" "));
-        pictureLabel.setText(MultiLanguageStringGetter.getString(" "));
-        pictureTextField.setText(MultiLanguageStringGetter.getString(" "));
-        pictureInfoLabel.setText(MultiLanguageStringGetter.getString(" "));
-        videoLabel.setText(MultiLanguageStringGetter.getString(" "));
-        videoTextField.setText(MultiLanguageStringGetter.getString(" "));
-        videoInfoLabel.setText(MultiLanguageStringGetter.getString(" "));
-        clearButton.setText(MultiLanguageStringGetter.getString(" "));
-        addAccountButton.setText(MultiLanguageStringGetter.getString(" "));
+        nameLabel.setText(MultiLanguageStringGetter.getString("Title"));
+        //nameTextField.setText(MultiLanguageStringGetter.getString(" "));
+        usernameInfoLabel1.setText(MultiLanguageStringGetter.getString("MissingTitle"));
+        directorLabel.setText(MultiLanguageStringGetter.getString("Director"));
+       //directorTextField.setText(MultiLanguageStringGetter.getString(" "));
+        directorInfoLabel.setText(MultiLanguageStringGetter.getString("MissingDirector"));
+        pictureLabel.setText(MultiLanguageStringGetter.getString("TitleScreenSource"));
+        //pictureTextField.setText(MultiLanguageStringGetter.getString(" "));
+        pictureInfoLabel.setText(MultiLanguageStringGetter.getString("MissingTitleScreenSource"));
+        videoLabel.setText(MultiLanguageStringGetter.getString("VideoSource"));
+        //videoTextField.setText(MultiLanguageStringGetter.getString(" "));
+        videoInfoLabel.setText(MultiLanguageStringGetter.getString("MissingVideoSource"));
+        uploadErrorLabel.setText(MultiLanguageStringGetter.getString("UploadFailed"));
+        clearButton.setText(MultiLanguageStringGetter.getString("Clear"));
+        addAccountButton.setText(MultiLanguageStringGetter.getString("Add"));
+
+        clearButton.setOnAction(event ->{
+            usernameInfoLabel1.setVisible(false);
+            directorInfoLabel.setVisible(false);
+            pictureInfoLabel.setVisible(false);
+            videoInfoLabel.setVisible(false);
+            uploadErrorLabel.setVisible(false);
+
+            nameTextField.clear();
+            directorTextField.clear();
+            pictureTextField.clear();
+            videoTextField.clear();
+
+        });
+
+        addAccountButton.setOnAction(event ->{
+            usernameInfoLabel1.setVisible(false);
+            directorInfoLabel.setVisible(false);
+            pictureInfoLabel.setVisible(false);
+            videoInfoLabel.setVisible(false);
+            uploadErrorLabel.setVisible(false);
+
+            String tilte = nameTextField.getText();
+            String director = directorTextField.getText();
+            String tilteScreenSource = pictureTextField.getText();
+            String videoSource = videoTextField.getText();
+
+
+
+            //sprawdz czy wszystkie pola zostaly uzupelnione
+            if(tilte.isEmpty() || director.isEmpty() || tilteScreenSource.isEmpty() ||
+                    videoSource.isEmpty())
+                uploadErrorLabel.setVisible(true);
+            else
+            {
+                uploadErrorLabel.setTextFill(Color.web(AppSettings.successColor()));
+
+                try {
+                    uploadErrorLabel.setText(MultiLanguageStringGetter.getString("UploadSuccessful"));
+                    throw new Exception("as");
+                }
+                catch (final Exception e){
+
+                }
+                inputVideo(tilte, director, tilteScreenSource, videoSource);
+
+            }
+
+        });
 
     }
 

@@ -1,3 +1,4 @@
+$ $
 $Registration$Registration
 $FirstName$First name
 $LastName$Last name
@@ -35,3 +36,20 @@ $SaveAccountChangesSuccess$Account changes were changed successfully!
 $StatusUser$User
 $StatusAdmin$Admin
 $PasswordRequirements$New password must have minimum 8 chars, 1 digit and 1 special character!
+$Title$Title
+$MissingTitle$Missing title
+$Director$Director
+$MissingDirector$Missing Director
+$TitleScreenSource$Title Screen Source
+$MissingTitleScreenSource$Missing Title Screen Source
+$VideoSource$Video Source
+$MissingVideoSource$Missing Video Source
+$UploadFailed$Upload Failed
+$UploadSuccessful$Upload Successful
+$Clear$Clear
+$Add$Add
+$Language$Language
+$English$English
+$Polski$Polski
+$DarkMode$DarkMode
+$Apply$Apply

@@ -15,12 +15,18 @@ public class AppSettings {
     public static void setNightMode(){
         nightMode = !nightMode;
     }
+    public static void setNightModeToNightMode(){
+        nightMode = false;
+    }
+    public static void setNightModeToLightMode(){
+        nightMode = true;
+    }
 
     public static String getLanguage(){
         return language;
     }
-    public void setLanguage(String language){  //add check if file for requested language exists
-        this.language = language;
+    public static void setLanguage(String languageT){  //add check if file for requested language exists
+        language = languageT;
     }
 
     //I way to get color

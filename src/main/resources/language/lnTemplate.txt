@@ -1,3 +1,4 @@
+$ $
 $Registration$
 $FirstName$
 $LastName$
@@ -35,3 +36,20 @@ $SaveAccountChangesSuccess$
 $StatusUser$
 $StatusAdmin$
 $PasswordRequirements$
+$Title$
+$MissingTitle$
+$Director$
+$MissingDirector$
+$TitleScreenSource$
+$MissingTitleScreenSource$
+$VideoSource$
+$MissingVideoSource$
+$UploadFailed$
+$UploadSuccessful$
+$Clear$
+$Add$
+$Language$
+$English$
+$Polski$
+$DarkMode$
+$Apply$

@@ -1,6 +1,7 @@
 package controllers;
 
 import Database.DatabaseManager;
+import javafx.event.ActionEvent;
 import appSettings.AppSettings;
 import appSettings.MultiLanguageStringGetter;
 import colorSchemes.ColorPallets;
@@ -15,6 +16,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import main.MainNoosphere;
+import javafx.event.ActionEvent;
+
+
 
 public class RegisterController extends DatabaseManager
 {
@@ -125,6 +130,7 @@ public class RegisterController extends DatabaseManager
             createAccountErrorLabel.setText(MultiLanguageStringGetter.getString("AccountCreatedSuccessfully!"));
 
             createAccount(name, surname, username, email, password, false);
+            MainNoosphere.openNewWindow(this, "loginScreen", actionEvent);
         }
     }
 

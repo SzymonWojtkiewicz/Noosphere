@@ -1,3 +1,4 @@
+$ $
 $Registration$Rejestracja
 $FirstName$Imię
 $LastName$Nazwisko
@@ -35,3 +36,20 @@ $SaveAccountChangesSuccess$Ustawienia konta zostały zmienione!
 $StatusUser$Użytkownik
 $StatusAdmin$Admin
 $PasswordRequirements$Nowe hasło musi mieć minimum 8 znaków, 1 cyfrę i 1 znak specjalny!
+$Title$
+$MissingTitle$
+$Director$
+$MissingDirector$
+$TitleScreenSource$
+$MissingTitleScreenSource$
+$VideoSource$
+$MissingVideoSource$
+$UploadFailed$
+$UploadSuccessful$
+$Clear$
+$Add$
+$Language$Język
+$English$English
+$Polski$Polski
+$DarkMode$Ciemny motyw
+$Apply$Zastosuj

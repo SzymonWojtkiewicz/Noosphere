@@ -14,6 +14,7 @@ public class MultiLanguageStringGetter {
 
     public static String getString (String baseName)throws Exception
     {
+        baseName = "$" + baseName + "$";
         File file = new File("./src/main/resources/language/" + AppSettings.getLanguage() + ".txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
