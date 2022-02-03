@@ -18,3 +18,20 @@ $PasswordsDoNotMatch!$Hasła się nie zgadzają!
 $AccountCreatedSuccessfully!$Pomyślnie utworzono konto!
 $IncorrectFormOfEmailAddress!$Niepoprawna forma adresu email!
 $GivenEmailAddressIsTaken!$Podany adres email jest zajęty!
+$MyAccountTitle$Moje konto
+$AccountStatus$Status konta
+$ChangeEmail$Zmień email
+$ChangePassword$Zmień hasło
+$Save$Zapisz
+$NewEmail$Nowy email
+$NewPassword$Nowe hasło
+$RepeatNewPassword$Powtórz nowe hasło
+$OldPassword$Stare hasło
+$NewPasswordDoesNotMatchRepeatPassword$Nowe hasło nie pasuje do powtórzonego hasła!
+$OldPasswordDoesNotMatchCurrentPassword$Stare hasło nie pasuje do obecnego hasła!
+$ChangeEmailSuccess$Email został zmieniony!
+$ChangePasswordSuccess$Hasło zostało zmienione!
+$SaveAccountChangesSuccess$Ustawienia konta zostały zmienione!
+$StatusUser$Użytkownik
+$StatusAdmin$Admin
+$PasswordRequirements$Nowe hasło musi mieć minimum 8 znaków, 1 cyfrę i 1 znak specjalny!
