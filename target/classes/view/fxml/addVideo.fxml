@@ -10,7 +10,7 @@
 
 <!--Your comment-->
 
-<VBox prefHeight="382.0" prefWidth="519.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddVideoController">
+<VBox prefHeight="382.0" prefWidth="519.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddVideoController">
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0">
          <children>
