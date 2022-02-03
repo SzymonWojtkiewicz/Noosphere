@@ -1,5 +1,6 @@
 package controllers;
 
+import Database.DatabaseManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -27,8 +28,7 @@ public class LoginController {
     @FXML
     private Label loginErrorLabel;
 
-    public void initialize()
-    {
+    public void initialize() throws Exception {
         loginErrorLabel.setVisible(false);
     }
 
@@ -46,8 +46,13 @@ public class LoginController {
         String login = loginField.getText();
         String password = passwordField.getText();
 
-        //TODO: Sprawdzamy poprawność w bazie danych (zmienna isLogged)
-        boolean isLogged = true;
+        boolean isLogged = false;
+
+        //sprawdza poprawność loginu i hasła, jeśli są zgodne z tymi w bazie danych, ustawia wartość isLogged na true
+        DatabaseManager dbAccount = new DatabaseManager();
+        if(dbAccount.usernameChecked(login) && dbAccount.passwordChecked(password)) {
+            isLogged = true;
+        }
 
         if(!isLogged || login.isEmpty() || password.isEmpty())
             loginErrorLabel.setVisible(true);

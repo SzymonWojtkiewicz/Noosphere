@@ -1,5 +1,6 @@
 package controllers;
 
+import Database.DatabaseManager;
 import appSettings.AppSettings;
 import appSettings.MultiLanguageStringGetter;
 import javafx.event.EventHandler;
@@ -103,7 +104,7 @@ public class AccountController
         changeNewEmail.managedProperty().bind(changeNewEmail.visibleProperty());
 
         //TODO: Na podstawie informacji jaki użytkownik jest aktualnie zalogowany, to jego dane pobieramy
-        String username = "Nazwa użytkownika";
+        String username = "loggedLogin";
         String firstName = "Imię";
         String lastName = "Nazwisko";
         String email = "example@gmail.com";
@@ -254,7 +255,9 @@ public class AccountController
                 e.printStackTrace();
             }
 
-            //TODO: Zapisanie do bazy danych zmienionych imienia i nazwiska
+            //Zapisanie do bazy danych zmienionych imienia i nazwiska
+            DatabaseManager dbNames= new DatabaseManager();
+            dbNames.changingNameAndSurname(usernameField.getText(), firstName, lastName);
         }
     }
 
@@ -266,8 +269,11 @@ public class AccountController
                 "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
                 "A-Z]{2,7}$";
 
-        //TODO: Sprawdzenie czy email, na który chcemy zmienić nie jest zajęty (zmienna `isTaken`)
+        //Sprawdzenie czy email, na który chcemy zmienić nie jest zajęty (zmienna `isTaken`)
         boolean isTaken = false;
+        DatabaseManager availableEmail = new DatabaseManager();
+        if(availableEmail.emailChecked(newEmail))
+            isTaken = true;
 
         if(newEmail.isEmpty())
         {
@@ -320,7 +326,9 @@ public class AccountController
 
             emailField.setText(newEmail);
 
-            //TODO: Zmiana w bazie danych emaila użytkownika na nowy podany email
+            //Zmiana w bazie danych emaila użytkownika na nowy podany email
+            DatabaseManager dbEmail = new DatabaseManager();
+            dbEmail.changingEmail(usernameField.getText(), newEmail);
         }
     }
 
@@ -416,7 +424,9 @@ public class AccountController
 
             userPassword = newPassword;
 
-            //TODO: Zmiana w bazie danych hasła użytkownika na nowe podane hasło
+            //Zmiana w bazie danych hasła użytkownika na nowe podane hasło
+            DatabaseManager dbPassword = new DatabaseManager();
+            dbPassword.changingPassword(usernameField.getText(), newPassword);
         }
     }
 
