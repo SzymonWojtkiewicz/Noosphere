@@ -15,12 +15,12 @@ public class MainAppController
     private final static String loginScreen = "loginScreen";
 
     private final static String homeScreen = "homeScreen";
-    private final static String myVideosScreen = "";
+    private final static String myVideosScreen = "AddVideo";
     private final static String myAccountScreen = "myAccountScreen";
     private final static String addVideoScreen = "mainAppMediaTransfer";
     private final static String playerScreen = "mediaPlayer";
     private final static String helpScreen = "";
-    private final static String settingsScreen = "";
+    private final static String settingsScreen = "settingsScreen";
 
     @FXML
     private GridPane videosGridPane;
@@ -61,7 +61,7 @@ public class MainAppController
                 showSearchField(true);
                 break;
             case "myVideosButton":
-                windowName = loginScreen;
+                windowName = myVideosScreen;
                 showSearchField(true);
                 break;
             case "myAccountButton":

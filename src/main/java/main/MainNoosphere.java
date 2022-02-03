@@ -3,12 +3,18 @@ package main;
 import Database.DatabaseManager;
 import appSettings.AppSettings;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import appSettings.MultiLanguageStringGetter;
+
+import java.io.IOException;
 
 
 public class MainNoosphere extends Application {
@@ -21,10 +27,13 @@ public class MainNoosphere extends Application {
     @Override
     public void start(Stage stage) throws  Exception{
 
+        AnchorPane loginWindow = FXMLLoader.load(getClass().getResource("/view/fxml/loginScreen.fxml"));
+        //HBox mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mainAppWindow.fxml"));
+        Scene scene = new Scene(loginWindow);//mainAppWindow
         //AnchorPane mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mediaPlayer.fxml")); //HBox mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mainAppWindow.fxml"));
         //HBox mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mainAppWindow.fxml"));
-        AnchorPane mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/registrationScreen.fxml"));
-        Scene scene = new Scene(mainAppWindow);
+        //AnchorPane mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/registrationScreen.fxml"));
+        //Scene scene = new Scene(mainAppWindow);
         stage.setScene(scene);
         stage.show();
 
@@ -46,4 +55,27 @@ public class MainNoosphere extends Application {
          */
 
     }
+
+    public static void openNewWindow(Object fromClass, String windowToOpen, ActionEvent event)
+    {
+        Pane mainAppWindow = null;
+        try
+        {
+            mainAppWindow = FXMLLoader.load(fromClass.getClass().getResource("/view/fxml/" + windowToOpen + ".fxml"));
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        Scene scene = new Scene(mainAppWindow);
+        Stage stage = new Stage();
+
+        stage.setScene(scene);
+        stage.show();
+
+        ((Node)(event.getSource())).getScene().getWindow().hide();
+    }
+
+
+
 }
