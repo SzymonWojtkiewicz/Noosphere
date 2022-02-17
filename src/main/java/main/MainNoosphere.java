@@ -29,6 +29,26 @@ public class MainNoosphere extends Application {
     @Override
     public void start(Stage stage) throws  Exception{
 
+        DatabaseConnector dbVideos = new DatabaseConnector();
+        dbVideos.connectToSqlAndCreateDB();
+        dbVideos.connectToDatabase();
+
+        dbVideos = new DatabaseUsers();
+        ((DatabaseUsers) dbVideos).createUsersTable();
+        ((DatabaseUsers) dbVideos).createAccount("Jan", "Pawel", "Papiez", "JeszczeJak123@tak.tak", "nie", true);
+        //((DatabaseUsers) dbVideos).upgradeToAdmin("tak");
+        //((DatabaseUsers) dbVideos).deleteAccount("tak");
+        //System.out.println(((DatabaseUsers) dbVideos).ifAdminExists());
+
+        dbVideos = new DatabaseVideos();
+        ((DatabaseVideos) dbVideos).createVideosTable();
+        ((DatabaseVideos) dbVideos).inputVideo("Walka", "nieznany", "JakisLink", "https://drive.google.com/file/d/1tJc8JTCd9mdlChpFwgaEFFso8un_DjYA/view?fbclid=IwAR1_Z6D6RfH0BMob6x8-Hr_DcMj0vZGmH877xqhvs_3Gm-e6jea1h8X0HNU");
+        //System.out.println(((DatabaseVideos) dbVideos).displaySourceVideo("Walka", "nieznany"));
+
+
+
+
+
         AnchorPane loginWindow = FXMLLoader.load(getClass().getResource("/view/fxml/loginScreen.fxml"));
         //HBox mainAppWindow = FXMLLoader.load(getClass().getResource("/view/fxml/mainAppWindow.fxml"));
         Scene scene = new Scene(loginWindow);//mainAppWindow
@@ -38,26 +58,6 @@ public class MainNoosphere extends Application {
         //Scene scene = new Scene(mainAppWindow);
         stage.setScene(scene);
         stage.show();
-
-        /*
-        DatabaseConnector dbVideos = new DatabaseConnector();
-        dbVideos.connectToSqlAndCreateDB();
-        dbVideos.connectToDatabase();
-
-        dbVideos = new DatabaseUsers();
-        ((DatabaseUsers) dbVideos).createUsersTable();
-        ((DatabaseUsers) dbVideos).createAccount("Jan", "Pawel", "Papiez", "JeszczeJak123@tak.tak", "nie", false);
-        ((DatabaseUsers) dbVideos).upgradeToAdmin("tak");
-        ((DatabaseUsers) dbVideos).deleteAccount("tak");
-        System.out.println(((DatabaseUsers) dbVideos).ifAdminExists());
-
-        dbVideos = new DatabaseVideos();
-        ((DatabaseVideos) dbVideos).createVideosTable();
-        ((DatabaseVideos) dbVideos).inputVideo("Walka", "nieznany", "JakisLink", "https://drive.google.com/file/d/1tJc8JTCd9mdlChpFwgaEFFso8un_DjYA/view?fbclid=IwAR1_Z6D6RfH0BMob6x8-Hr_DcMj0vZGmH877xqhvs_3Gm-e6jea1h8X0HNU");
-        System.out.println(((DatabaseVideos) dbVideos).displaySourceVideo("Walka", "nieznany"));
-        */
-
-
 
     }
 

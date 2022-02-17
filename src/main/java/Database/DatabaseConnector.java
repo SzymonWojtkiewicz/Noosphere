@@ -25,7 +25,6 @@ public class DatabaseConnector {
         } catch (Exception ex){
             System.out.println("Unable to connect to database");
             System.out.println("SQLException: " + ex.getMessage());
-            ex.printStackTrace();
         }
     }
 
@@ -51,7 +50,6 @@ public class DatabaseConnector {
         } catch (Exception ex){
             System.out.println("Unable to connect to database");
             System.out.println("SQLException: " + ex.getMessage());
-            ex.printStackTrace();
         }
 
     }
