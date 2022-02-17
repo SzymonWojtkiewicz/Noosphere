@@ -1,5 +1,6 @@
 package controllers;
 
+import Database.DatabaseVideos;
 import appSettings.AppSettings;
 import appSettings.MultiLanguageStringGetter;
 import javafx.fxml.FXML;
@@ -9,12 +10,10 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import main.MainNoosphere;
-import Database.DatabaseManager;
-
 import java.io.IOException;
 import java.io.UncheckedIOException;
 
-public class AddVideoController extends DatabaseManager
+public class AddVideoController extends DatabaseVideos
 {
 
     @FXML

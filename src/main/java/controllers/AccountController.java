@@ -1,6 +1,6 @@
 package controllers;
 
-import Database.DatabaseManager;
+import Database.DatabaseUsers;
 import appSettings.AppSettings;
 import appSettings.MultiLanguageStringGetter;
 import javafx.event.EventHandler;
@@ -256,7 +256,7 @@ public class AccountController
             }
 
             //Zapisanie do bazy danych zmienionych imienia i nazwiska
-            DatabaseManager dbNames= new DatabaseManager();
+            DatabaseUsers dbNames= new DatabaseUsers();
             dbNames.changingNameAndSurname(usernameField.getText(), firstName, lastName);
         }
     }
@@ -271,7 +271,7 @@ public class AccountController
 
         //Sprawdzenie czy email, na który chcemy zmienić nie jest zajęty (zmienna `isTaken`)
         boolean isTaken = false;
-        DatabaseManager availableEmail = new DatabaseManager();
+        DatabaseUsers availableEmail = new DatabaseUsers();
         if(availableEmail.emailChecked(newEmail))
             isTaken = true;
 
@@ -327,7 +327,7 @@ public class AccountController
             emailField.setText(newEmail);
 
             //Zmiana w bazie danych emaila użytkownika na nowy podany email
-            DatabaseManager dbEmail = new DatabaseManager();
+            DatabaseUsers dbEmail = new DatabaseUsers();
             dbEmail.changingEmail(usernameField.getText(), newEmail);
         }
     }
@@ -425,7 +425,7 @@ public class AccountController
             userPassword = newPassword;
 
             //Zmiana w bazie danych hasła użytkownika na nowe podane hasło
-            DatabaseManager dbPassword = new DatabaseManager();
+            DatabaseUsers dbPassword = new DatabaseUsers();
             dbPassword.changingPassword(usernameField.getText(), newPassword);
         }
     }

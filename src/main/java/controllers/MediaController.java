@@ -1,6 +1,6 @@
 package controllers;
 
-import Database.DatabaseManager;
+import Database.DatabaseVideos;
 
 
 import java.io.File;
@@ -30,7 +30,7 @@ import javafx.util.Duration;
 
 public class MediaController implements Initializable{
 
-    private DatabaseManager movie = new DatabaseManager();
+    private DatabaseVideos movie = new DatabaseVideos();
     //Uses Database methods
     //Labeled as movie
 

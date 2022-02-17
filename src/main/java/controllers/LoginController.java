@@ -1,6 +1,6 @@
 package controllers;
 
-import Database.DatabaseManager;
+import Database.DatabaseUsers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -47,8 +47,8 @@ public class LoginController {
         String login = loginField.getText();
         String password = passwordField.getText();
 
-        //TODO: Sprawdzamy poprawność w bazie danych (zmienna isLogged)
-        DatabaseManager dbAccount = new DatabaseManager();
+        //Sprawdzamy poprawność w bazie danych (zmienna isLogged)
+        DatabaseUsers dbAccount = new DatabaseUsers();
         boolean isLogged = false;
         if(dbAccount.passwordChecked(password) && (dbAccount.usernameChecked(login)))
             isLogged = true;

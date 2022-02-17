@@ -1,6 +1,6 @@
 package controllers;
 
-import Database.DatabaseManager;
+import Database.DatabaseUsers;
 import javafx.event.ActionEvent;
 import appSettings.AppSettings;
 import appSettings.MultiLanguageStringGetter;
@@ -18,7 +18,7 @@ import javafx.event.ActionEvent;
 
 
 
-public class RegisterController extends DatabaseManager
+public class RegisterController extends DatabaseUsers
 {
     @FXML
     private TextField nameTextField;

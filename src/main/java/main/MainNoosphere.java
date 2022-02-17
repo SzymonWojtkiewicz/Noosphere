@@ -1,6 +1,8 @@
 package main;
 
-import Database.DatabaseManager;
+import Database.DatabaseConnector;
+import Database.DatabaseVideos;
+import Database.DatabaseUsers;
 import appSettings.AppSettings;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -37,22 +39,25 @@ public class MainNoosphere extends Application {
         stage.setScene(scene);
         stage.show();
 
-        //DatabaseManager dbVideos = new DatabaseManager();
         /*
-        //dbVideos.connectToDatabase();
-        //dbVideos.createUsersTable();
-        //dbVideos.createVideosTable();
-        //dbVideos.createAccount("'tak'", "'nie'", "'halo'", false);
-        //dbVideos.upgradeToAdmin("'tak'");
-        //dbVideos.displayAccountName("tak");
-        //dbVideos.displayAccount("tak");
-        //dbVideos.deleteAccount("tak");
-        //dbVideos.inputVideo("'Walka'", "'nieznany'", "'akcja'", "'nieznany'", "'https://drive.google.com/file/d/1tJc8JTCd9mdlChpFwgaEFFso8un_DjYA/view?fbclid=IwAR1_Z6D6RfH0BMob6x8-Hr_DcMj0vZGmH877xqhvs_3Gm-e6jea1h8X0HNU'");
-        //dbVideos.displayInformationVideo("Walka", "nieznany");
-        //System.out.println(dbVideos.displaySourceVideo("Walka", "nieznany"));
-        //System.out.println(dbVideos.ifAdminExists());
+        DatabaseConnector dbVideos = new DatabaseConnector();
+        dbVideos.connectToSqlAndCreateDB();
+        dbVideos.connectToDatabase();
 
-         */
+        dbVideos = new DatabaseUsers();
+        ((DatabaseUsers) dbVideos).createUsersTable();
+        ((DatabaseUsers) dbVideos).createAccount("Jan", "Pawel", "Papiez", "JeszczeJak123@tak.tak", "nie", false);
+        ((DatabaseUsers) dbVideos).upgradeToAdmin("tak");
+        ((DatabaseUsers) dbVideos).deleteAccount("tak");
+        System.out.println(((DatabaseUsers) dbVideos).ifAdminExists());
+
+        dbVideos = new DatabaseVideos();
+        ((DatabaseVideos) dbVideos).createVideosTable();
+        ((DatabaseVideos) dbVideos).inputVideo("Walka", "nieznany", "JakisLink", "https://drive.google.com/file/d/1tJc8JTCd9mdlChpFwgaEFFso8un_DjYA/view?fbclid=IwAR1_Z6D6RfH0BMob6x8-Hr_DcMj0vZGmH877xqhvs_3Gm-e6jea1h8X0HNU");
+        System.out.println(((DatabaseVideos) dbVideos).displaySourceVideo("Walka", "nieznany"));
+        */
+
+
 
     }
 
